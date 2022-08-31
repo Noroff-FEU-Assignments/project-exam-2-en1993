@@ -1,0 +1,12 @@
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.form-error{
+  background: #fbb;
+  color: darkred;
+  padding: 0.4rem 1rem;
+}
+
