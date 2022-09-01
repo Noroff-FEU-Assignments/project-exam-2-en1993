@@ -1,9 +1,11 @@
-
+import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
+import logo from '../../images/logo.jpg'
 
 const DesktopNav = () => {
   return ( 
-    <header>
+    <header className="desktopNav">
+      <Link to="/" className="logo"> <img src={logo} alt="logo" /></Link>
       <nav>
         <NavLinks/>
       </nav>

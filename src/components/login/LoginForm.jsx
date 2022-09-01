@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import axios from 'axios';
+import axios from "axios";
 import FormError from "../common/FormError";
 import { BASE_URL, TOKEN_PATH } from "../../constants/api";
 import AuthContext from "../../context/AuthContext";
@@ -28,7 +28,7 @@ export default function LoginForm() {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  
+
   const [, setAuth] = useContext(AuthContext);
 
   async function onSubmit(data) {
@@ -70,6 +70,7 @@ export default function LoginForm() {
               name="password"
               placeholder="Type password"
               {...register("password")}
+              type="password"
             />
             {errors.password && (
               <FormError>{errors.password.message}</FormError>

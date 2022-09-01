@@ -16,7 +16,7 @@ function NavLinks(props) {
 
   return (
     <ul>
-      <li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? activeClassName : undefined)}
@@ -24,7 +24,7 @@ function NavLinks(props) {
           Home
         </NavLink>
       </li>
-      <li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <NavLink
           to="/accommodation "
           className={({ isActive }) => (isActive ? activeClassName : undefined)}
@@ -32,7 +32,7 @@ function NavLinks(props) {
           Accommodation
         </NavLink>
       </li>
-      <li>
+      <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <NavLink
           to="/contact"
           className={({ isActive }) => (isActive ? activeClassName : undefined)}
@@ -42,8 +42,13 @@ function NavLinks(props) {
       </li>
       {auth ? (
         <>
-          <button onClick={logout}>Log out</button>
-          <li>
+          <button className="adminSection" onClick={logout}>
+            Log out
+          </button>
+          <li
+            onClick={() => props.isMobile && props.closeMobileMenu()}
+            className="adminSection"
+          >
             <NavLink
               to="/admin"
               className={({ isActive }) =>
@@ -55,7 +60,10 @@ function NavLinks(props) {
           </li>
         </>
       ) : (
-        <li>
+        <li
+          onClick={() => props.isMobile && props.closeMobileMenu()}
+          className="adminSection"
+        >
           <NavLink
             to="/login"
             className={({ isActive }) =>
