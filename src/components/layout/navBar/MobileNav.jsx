@@ -1,17 +1,17 @@
 import React from "react";
 import NavLinks from "./NavLinks";
-import {HiOutlineBars3CenterLeft} from 'react-icons/hi';
-import {IoCloseSharp} from 'react-icons/io';
+import {RiMenu3Line} from 'react-icons/ri';
+import {RiCloseFill} from 'react-icons/ri';
 import {useState} from "react";
 
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
 
   const burgerIcon = 
-    <HiOutlineBars3CenterLeft className='burger' onClick={() => setOpen(!open)} />
+    <RiMenu3Line className='burger' onClick={() => setOpen(!open)} />
   
   const burgerCloseIcon = 
-    <IoCloseSharp className='burgerClose' onClick={() => setOpen(!open)} />
+    <RiCloseFill className='burgerClose' onClick={() => setOpen(!open)} />
   
   const closeMobileMenu = () => setOpen(false);
   return (
