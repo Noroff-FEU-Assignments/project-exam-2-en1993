@@ -7,21 +7,35 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@200;300;400;700&family=Lato:wght@300;400&family=Spline+Sans+Mono:ital,wght@0,300;0,400;0,600;1,300&display=swap');
 
-/* font-family: 'Hepta Slab', serif; ExtraLight 200, Light 300, Regular 400, Bold 700
+/* font-family: 'Hepta Slab';, serif; ExtraLight 200, Light 300, Regular 400, Bold 700
 font-family: 'Lato', sans-serif; light 300, Regular 400
-font-family: 'Spline Sans Mono', monospace;Light 300, Light 300 Italic, Regular 400, Semibold 600 */
+font-family: 'Spline Sans Mono;', monospace;Light 300, Light 300 Italic, Regular 400, Semibold 600 */
 h1{
-  padding-top: 4em;
+  position: relative;
+  bottom: 5em;
+  text-align: center;
 }
 html, body{
   height: 100%;
 }
+
+main{
+  flex-grow: 1;
+  height: 100%;
+}
+
+
 
 body{
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   font-family: 'Hepta Slab', serif, cursive, 'Times New Roman', Times, serif, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Container{
+  max-width: 1100px;
+  margin: 15px auto;
 }
 
 :root{
@@ -36,10 +50,12 @@ body{
   padding: 0.4rem 1rem;
 }
 
+/* Header Section */
+
 .logo img{
   height: 100%;
   position: relative;
-  right: 35%;
+  right: 15%;
 }
  .adminSection{
   position: relative;
@@ -52,7 +68,7 @@ header{
   width: 100%;
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: relative;
   height: 100px;
   z-index: 7;
 }
@@ -61,11 +77,13 @@ header{
 
 ul {
   background: black;
-  position: relative;
-  width: 100vh;
-  top: 84px;
+  position: absolute;
+  width: 100%;
+  top: 70px;
   padding: 15px;
+  right: 0%;
 }
+
 
 ul li{
   display: block;
@@ -98,6 +116,7 @@ color: var(--primary-color);
   font-size: 65px;
   color: var(--secondary-color);
   margin: 20px 0px;
+  cursor: pointer;
 }
 
 .container{
@@ -116,12 +135,15 @@ color: var(--primary-color);
   display: none;
 }
 
-@media only screen and (min-width: 1038px){
+@media only screen and (min-width: 1024px){
 
 
   h1{
-    padding-top: 6em;
+    margin-top: 11em;
   }
+
+  /* Header Section */
+
   .responsiveNav{
     display: none;
   }
@@ -129,6 +151,10 @@ color: var(--primary-color);
   .desktopNav{
     display: flex;
    
+  }
+
+  .DesktopNavLinks{
+    position: relative;
   }
 
   ul li{
@@ -139,6 +165,7 @@ color: var(--primary-color);
   }
 
   header{
+    position: fixed;
     background-color: var(--secondary-color);
     height: 150px;
     align-items: center;
@@ -155,4 +182,9 @@ color: var(--primary-color);
   }
  
  
+}
+
+.posts a {
+  list-style: none;
+  color: green;
 }

@@ -1,0 +1,82 @@
+.footerWrapper h3{
+  color: var(--primary-color);
+  font-family: 'Hepta Slab';
+  font-weight: bold;
+  text-align: center;
+}
+.footerContent{
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  min-height: 190px;
+  align-items: center;
+  width: 100%;
+}
+
+.footerWrapper{
+  color: var(--third-color);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 30px;
+  width: 1100px;
+  font-family: 'Spline Sans Mono';
+  font-weight: 400;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+}
+.footerContenIcons, .footerContenIconsPC, .footerContenIconsGM{
+  color: var(--primary-color);
+  font-size: 26px;
+}
+
+.footerContenIconsGM{
+  position: relative;
+  top: 5px;
+}
+
+.footerContenIconsPC{
+  font-size: 30px;
+  position: relative;
+  bottom: 2px;
+}
+
+.footerContactInfo{
+  display: block;
+}
+
+.footerIcons{
+  display: block;
+  
+}
+
+.footerSocialIcons{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  position: relative;
+  bottom: 10px;
+}
+
+.footerFollow{
+  display: block;
+}
+
+.followContent{
+  position: relative;
+  top: 10px;
+}
+@media only screen and (min-width: 1024px){
+  .footerWrapper{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footerContent{
+    height: 190px;
+    position: fixed;
+    bottom: 0;
+  } 
+}

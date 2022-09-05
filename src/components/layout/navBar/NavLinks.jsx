@@ -26,7 +26,7 @@ function NavLinks(props) {
       </li>
       <li onClick={() => props.isMobile && props.closeMobileMenu()}>
         <NavLink
-          to="/accommodation "
+          to="/accommodation"
           className={({ isActive }) => (isActive ? activeClassName : undefined)}
         >
           Accommodation

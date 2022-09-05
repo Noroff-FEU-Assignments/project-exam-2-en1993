@@ -1,11 +1,24 @@
+import Footer from "../layout/footer/Footer";
 import Heading from "../layout/Heading";
+import AdminMenu from "./AdminMenu";
+import PropTypes from 'prop-types';
+import MediaDropdown from "./media/MediaDropdown";
 
-const AdminPage= () => {
-  return ( 
+
+export default function AdminPage({ children }) {
+  return (
     <>
-      <Heading content =' This is Admin Page'/>
+      <main>
+        <Heading content=" This is Admin Page" />
+        <MediaDropdown/>
+        <AdminMenu />
+        {children ? children : <p>Select a section</p>}
+      </main>
+      <Footer />
     </>
-   );
+  )
 }
- 
-export default AdminPage;
+
+AdminPage.propTypes = {
+  children : PropTypes.node,
+};

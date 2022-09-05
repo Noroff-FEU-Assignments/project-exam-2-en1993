@@ -1,8 +1,14 @@
+import Footer from "../layout/footer/Footer";
 import Heading from "../layout/Heading";
 
 const HomePage = () => {
   return ( 
-    <Heading content =' This is Home Page'/>
+    <>
+      <main>
+        <Heading content =' This is Home Page'/>
+      </main>
+      <Footer/>
+    </>
    );
 }
  
