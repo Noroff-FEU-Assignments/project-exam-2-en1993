@@ -7,7 +7,7 @@ import * as yup from 'yup';
 import {yupResolver} from '@hookform/resolvers/yup'
 import FormError from '../../common/FormError'
 import useAxios from "../../../hooks/useAxios";
-import MediaDropdown from "../media/MediaDropdown";
+
 
 const schema = yup.object().shape({
   title: yup.string().required('Title is required'),
@@ -73,9 +73,7 @@ export default function AddPost() {
               <label>Content</label>
               <textarea name="content" placeholder="Content" {...register('content')}/>
              </div>
-             {/* <div>
-              <MediaDropdown register={register}/>
-             </div> */}
+            
              <button>{submitting ? 'Submitting...' : 'Submit'}</button>
           </fieldset>
         </form>

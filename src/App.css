@@ -184,7 +184,18 @@ color: var(--primary-color);
  
 }
 
-.posts a {
-  list-style: none;
+ul.posts a {
+  font-weight: bold;
   color: green;
+}
+
+ul.posts {
+  list-style: none;
+  padding: 0;
+}
+
+ul.posts{
+  background-color: aquamarine;
+  margin-bottom: 5px;
+  padding: 10px;
 }

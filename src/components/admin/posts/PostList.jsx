@@ -39,7 +39,7 @@ export default function PostList() {
         {posts.map((media) => {
           return (
             <li key={media.id}>
-              <Link to={`/admin/posts/edit${media.id}`}>
+              <Link to={`/admin/posts/edit/${media.id}`}>
                 {media.title.rendered}
               </Link>
             </li>
