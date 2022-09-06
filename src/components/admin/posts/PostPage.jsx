@@ -3,6 +3,7 @@ import AdminPage from "../AdminPage";
 import { Link } from "react-router-dom";
 import PostList from "./PostList";
 
+
 const PostPage = () => {
   return (
     <>

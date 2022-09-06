@@ -45,7 +45,7 @@ export default function AddPost() {
     try {
       const response = await http.post('/wp/v2/posts', data);
       console.log('response', response.data);
-      navigate.push('/admin/posts');
+      navigate.push("/admin/posts");
     } catch (error) {
       console.log('error', error);
       setServerError(error.tostring());

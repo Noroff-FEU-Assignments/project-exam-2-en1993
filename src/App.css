@@ -11,8 +11,7 @@
 font-family: 'Lato', sans-serif; light 300, Regular 400
 font-family: 'Spline Sans Mono;', monospace;Light 300, Light 300 Italic, Regular 400, Semibold 600 */
 h1{
-  position: relative;
-  bottom: 5em;
+  margin-top: -5em;
   text-align: center;
 }
 html, body{
@@ -22,6 +21,7 @@ html, body{
 main{
   flex-grow: 1;
   height: 100%;
+  padding: 0px 10px;
 }
 
 
@@ -139,7 +139,7 @@ color: var(--primary-color);
 
 
   h1{
-    margin-top: 11em;
+    margin-top: 7em;
   }
 
   /* Header Section */
@@ -180,22 +180,39 @@ color: var(--primary-color);
   ul {
     position: unset;
   }
- 
+
  
 }
 
 ul.posts a {
   font-weight: bold;
-  color: green;
+  color: var(--links-color);
+  
 }
 
 ul.posts {
   list-style: none;
-  padding: 0;
-}
-
-ul.posts{
-  background-color: aquamarine;
+  display: grid;
+  background-color: white;
   margin-bottom: 5px;
   padding: 10px;
+  position: relative;
+}
+
+.success{
+  padding: 1rem;
+  margin: 10px 0;
+  background: rgb(5, 111, 5);
+  color: white;
+  border: none;
+}
+
+.delete{
+  background: rgba(165, 5, 5, 0.995);
+  color: white;
+  border: none;
+}
+
+.editContent{
+  position: relative;
 }
