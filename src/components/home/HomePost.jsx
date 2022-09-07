@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { SECONDARY_API } from "../../constants/secondaryApi";
+import Heading from "../layout/Heading";
 
 export default function HomePost() {
   const [posts, setPosts] = useState([]);
@@ -49,7 +50,8 @@ export default function HomePost() {
       {posts.map(function (post) {
         return (
           <div key={post.id}>
-            {post.title.rendered}
+            <Heading content={post.title.rendered} size="3"/>
+            
             <div className="slidePic">
               {" "}
               <img src={post.source_url} alt={post.title.rendered} />
