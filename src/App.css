@@ -216,3 +216,8 @@ ul.posts {
 .editContent{
   position: relative;
 }
+
+.slidePic img{
+  height: 300px;
+  width: 300px;
+}
