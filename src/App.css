@@ -217,7 +217,31 @@ ul.posts {
   position: relative;
 }
 
-.slidePic img{
-  height: 300px;
-  width: 300px;
+.slider-wrapper{
+  max-width: 1000px;
+  max-height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+[data-element="galleryShow"] .show {
+  display: none;
+}
+
+[data-element="galleryShow"] .show.activate {
+  display: block;
+}
+
+.slideImage{
+  height: 100%;
+  width: 100%;
+}
+
+.show h3{
+  position: absolute;
+  font-size: 25px;
+  color: white;
+  margin: 14px;
+  padding: 18px;
+  background: #000000a1;
 }
