@@ -76,7 +76,7 @@ export default function HomePost() {
     <>
       {posts
         .filter(function (post) {
-          return post.id === 629 || post.id === 621 || post.id === 620;
+          return post.id === 661 || post.id === 660 || post.id === 659;
         })
         .map(function (post) {
           return (
