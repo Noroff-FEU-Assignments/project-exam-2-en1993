@@ -46,10 +46,6 @@ export default function HomePost() {
   //   if(i === id){ break; }
   // }
 
-  const slidesContainer = document.getElementById("slide-Container");
-  const imageSlide = document.querySelector(".image-slide");
-  const prevBtn = document.getElementById("slide-prev");
-  const nextBtn = document.getElementById("slide-next");
 
   function galleryShowing(galleryShow) {
     var shows = document.querySelectorAll(
@@ -57,7 +53,7 @@ export default function HomePost() {
     ); // Get an array of slides
 
     var index = 0,
-      time = 6000;
+      time = 100000000;
     shows[index].classList.add("activate");
 
     setInterval(() => {
@@ -81,7 +77,7 @@ export default function HomePost() {
         .map(function (post) {
           return (
             <div key={post.id}>
-              <div id="showGallery" data-element="galleryShow">
+              <div id="showGallery" data-element="galleryShow" >
                 <div role="list">
                   <div className="show">
                     <Heading content={post.title.rendered} size="3" />
