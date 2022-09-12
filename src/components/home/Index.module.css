@@ -1,0 +1,50 @@
+h2, h3{
+  text-align: center;
+  font-family: 'Hepta Slab';
+}
+.servicesContainer{
+  max-width: 1000px;
+  margin: 25px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.servicesContent{
+  max-width: 300px;
+  font-family: 'Spline Sans Mono';
+}
+ 
+.servicesIcons{
+ display: flex;
+ justify-content: center;
+ margin: 0px 45%;
+ font-size: 35px;
+}
+
+section{
+  margin: 55px auto;
+
+}
+
+.featuredContainer{
+  max-width: 1000px;
+  margin: 25px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.featuredPic{
+  width: 310px;
+  height: 250px;
+}
+
+.featuredContent h3{
+  position: relative;
+  bottom: 65px;
+  background: var(--primary-color);
+  margin: 10px;
+}
