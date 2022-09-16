@@ -11,6 +11,7 @@ import NavBar from "./components/layout/NavBar";
 import AccommodationPage from "./components/accommodation/AccommodationPage";
 import ContactPage from "./components/contact/ContactPage";
 import { AuthProvider } from "./context/AuthContext";
+import AccommodationDetail from "./components/accommodation/AccommodationDetail";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/accommodation" element={<AccommodationPage />} />
+          <Route path="/accommodation/detail/:id" element={<AccommodationDetail />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/admin" element={<AdminPage />} />

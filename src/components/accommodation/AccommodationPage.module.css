@@ -1,0 +1,58 @@
+.accommFormWrapper{
+  max-width: 1000px;
+  margin: 25px auto;
+}
+
+.productPicture{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.productsWrapper{
+  max-width: 1000px;
+  margin: 25px auto;
+}
+.product{
+  width: 300px;
+  margin: 25px auto;
+  text-align: center;
+  /* border: 4px solid green; */
+}
+
+.productsIcons{
+  font-size: 30px;
+  position: relative;
+  /* left: 5rem; */
+  padding: 10px;
+}
+
+.product h3{
+  position: relative;
+  bottom: 19px;
+  border-bottom: 2px solid black;
+}
+
+.moreInfoCTA{
+  font-family: 'Hepta Slab';
+  background:var(--primary-color) ;
+  font-size: 21px;
+  border: none;
+  font-weight: bold;
+  padding: 3px 10px;
+  margin: 10px 0px;
+}
+
+.moreInfoCTA:hover{
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
