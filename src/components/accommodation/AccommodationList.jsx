@@ -65,7 +65,10 @@ export default function AccommodationLi() {
               <div className={styles.product}>
                 <b>From: ${post.prices.price.slice(0, 3)}</b>
                 <div>
-                  <Link to={`/accommodation/detail/${post.id}`} className={styles.moreInfoCTA}>
+                  <Link
+                    to={`/accommodation/detail/${post.id}`}
+                    className={styles.moreInfoCTA}
+                  >
                     {console.log(post.id)} More Info
                   </Link>
                 </div>
