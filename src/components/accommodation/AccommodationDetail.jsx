@@ -63,7 +63,7 @@ function AccommodationDetail() {
           className={styles.productPicture}
         />
       </div>
-      <div dangerouslySetInnerHTML={{ html: post.description }} />
+      <div dangerouslySetInnerHTML={{ __html: post.description }} />
       {/* {post.description} */}
     </div>
   );

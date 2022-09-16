@@ -45,8 +45,8 @@ body{
   --links-color:blue;
 }
 .form-error{
-  background: #fbb;
-  color: darkred;
+  background: rgb(221, 88, 88);
+  color: rgb(107, 9, 9);
   padding: 0.4rem 1rem;
 }
 
