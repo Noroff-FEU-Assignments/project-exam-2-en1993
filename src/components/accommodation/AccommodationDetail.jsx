@@ -2,15 +2,18 @@ import { useState, useEffect } from "react";
 import { PRODUCTS_API } from "../../constants/productsApi";
 import Heading from "../layout/Heading";
 import styles from "../accommodation/AccommodationPage.module.css";
-// import { RiInformationFill } from "react-icons/ri";
-// import { FaPhoneAlt } from "react-icons/fa";
-// import { RiRestaurantFill } from "react-icons/ri";
+import { RiInformationFill } from "react-icons/ri";
+import { FaPhoneAlt } from "react-icons/fa";
+import { RiRestaurantFill } from "react-icons/ri";
 import { useParams, useNavigate } from "react-router-dom";
+import { BookingModal } from "./BookingModal";
+import { BookingForm } from "./BookingForm";
 
 function AccommodationDetail() {
   const [post, setPost] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [shouldShowModal, setShouldShowModal] = useState(false);
 
   let navigate = useNavigate();
 
@@ -54,18 +57,49 @@ function AccommodationDetail() {
   }
 
   return (
-    <div className={styles.productDetail}>
-      <Heading content={post.name} size="1" />
-      <div>
-        <img
-          src={post.images[0].src}
-          alt={post.name}
-          className={styles.productPicture}
-        />
+    <>
+      <Heading content="Specific Page" size="1" />
+      <div className={styles.productDetail}>
+        <div className={[styles.detailContents, styles.detailContent].join("")}>
+          <Heading content={post.name} size="2" />
+          <img
+            src={post.images[0].src}
+            alt={post.name}
+            className={styles.productDetailPicture}
+          />
+        </div>
+        <div className={styles.detailContent0}>
+          <div
+            dangerouslySetInnerHTML={{ __html: post.description }}
+            className={styles.detailContent1}
+          />
+          <div className={styles.detailContent2}>
+            <p>From: ${post.prices.price.slice(0, 3)}</p>
+            <p>Per Night</p>
+
+            <div>
+              <FaPhoneAlt className={styles.productsIcons} />
+              <RiInformationFill className={styles.productsIcons} />
+              <RiRestaurantFill className={styles.productsIcons} />
+            </div>
+            <>
+              <BookingModal
+                shouldShow={shouldShowModal}
+                onRequestClose={() => setShouldShowModal(false)}
+              >
+                <BookingForm />
+              </BookingModal>
+              <button
+                className={styles.bookNowCTA}
+                onClick={() => setShouldShowModal(!shouldShowModal)}
+              >
+                {shouldShowModal ? "Book Now" : "Close"}
+              </button>
+            </>
+          </div>
+        </div>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: post.description }} />
-      {/* {post.description} */}
-    </div>
+    </>
   );
 }
 

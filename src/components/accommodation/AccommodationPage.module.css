@@ -41,7 +41,7 @@
   border-bottom: 2px solid black;
 }
 
-.moreInfoCTA{
+.moreInfoCTA,.bookNowCTA{
   font-family: 'Hepta Slab';
   background:var(--primary-color) ;
   font-size: 21px;
@@ -51,8 +51,75 @@
   margin: 10px 0px;
 }
 
-.moreInfoCTA:hover{
+.bookNowCTA:hover, .moreInfoCTA:hover{
   background: var(--secondary-color);
   color: var(--primary-color);
   cursor: pointer;
+}
+
+/* Detail pagee */
+
+.productDetail{
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.productDetailPicture{
+  width: 100%;
+  height: 100%;
+}
+
+.detailContent{
+  max-width: 700px;
+  max-height: 450px;
+  margin-bottom: 6em;
+}
+
+.detailContent0{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+ 
+}
+
+.detailContent1{
+  max-width: 320px;
+}
+
+.detailContent2{
+  max-width: 300px;
+  font-weight: bold;
+}
+
+/* Booking Modal */
+
+.modalBackground{
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.modalBody{
+  background-color: white;
+  margin: 10% auto;
+  padding: 20%;
+  width: 50%;
+}
+
+@media only screen and (min-width: 1024px){
+
+  .productDetail{
+    position: relative;
+    top: 1em;
+  }
 }
