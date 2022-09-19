@@ -6,6 +6,7 @@ export const BookingForm = () => {
   const [email, setEmail] = useState();
   const [checkIn, setCheckIn] = useState();
   const [checkOut, setCheckOut] = useState();
+  const [message, setMessage] = useState();
 
   return (
     <form>
@@ -36,6 +37,15 @@ export const BookingForm = () => {
         placeholder="Check Out"
         value={checkOut}
         onChange={(e) => setCheckOut(e.target.value)}
+      />
+      <textarea
+        name="message"
+        id="message"
+        cols="30"
+        rows="10"
+        placeholder="Message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
       />
       <button>Submit</button>
     </form>
