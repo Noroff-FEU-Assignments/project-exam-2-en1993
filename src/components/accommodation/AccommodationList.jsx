@@ -63,7 +63,7 @@ export default function AccommodationLi() {
                 </div>
               </div>
               <div className={styles.product}>
-                <b>From: ${post.prices.price.slice(0, 3)}</b>
+                <p>From: ${post.prices.price.slice(0, 3)}</p>
                 <div>
                   <Link
                     to={`/accommodation/detail/${post.id}`}

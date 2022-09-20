@@ -8,6 +8,7 @@ import { RiRestaurantFill } from "react-icons/ri";
 import { useParams, useNavigate } from "react-router-dom";
 import { BookingModal } from "./BookingModal";
 import { BookingForm } from "./BookingForm";
+import Footer from "../layout/footer/Footer";
 
 function AccommodationDetail() {
   const [post, setPost] = useState([]);

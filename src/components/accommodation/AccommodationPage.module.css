@@ -41,6 +41,10 @@
   border-bottom: 2px solid black;
 }
 
+.product{
+font-weight: bold;
+}
+
 .modalCloseCTA,.moreInfoCTA,.bookNowCTA,.bookingFormCTA{
   font-family: 'Hepta Slab';
   background:var(--primary-color) ;
@@ -49,6 +53,7 @@
   font-weight: bold;
   padding: 3px 10px;
   margin: 10px 0px;
+  text-decoration: none;
 }
 
 .modalCloseCTA:hover,.bookingFormCTA:hover, .bookNowCTA:hover, .moreInfoCTA:hover{
@@ -106,7 +111,7 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
-  top: 13em;
+  top: 9em;
 }
 
 
