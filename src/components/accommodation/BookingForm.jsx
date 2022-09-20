@@ -5,6 +5,8 @@ import styles from "../accommodation/AccommodationPage.module.css";
 export const BookingForm = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState();
+  const [adults, setAdults] = useState();
+  const [kids, setKids] = useState();
   const [checkIn, setCheckIn] = useState();
   const [checkOut, setCheckOut] = useState();
   const [message, setMessage] = useState();
@@ -48,6 +50,28 @@ export const BookingForm = () => {
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>
+          </div>
+        </div>
+        <div className={styles.personQuantity}>
+          <div>
+            <label>Adults</label>
+            <input
+              type="number"
+              name="adults"
+              placeholder="Adult"
+              value={adults}
+              onChange={(e) => setAdults(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>kids</label>
+            <input
+              type="number"
+              name="kids"
+              placeholder="Kids"
+              value={kids}
+              onChange={(e) => setKids(e.target.value)}
+            />
           </div>
         </div>
         <div className={styles.dateContainer}>
