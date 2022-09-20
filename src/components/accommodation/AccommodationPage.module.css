@@ -161,10 +161,10 @@ bottom: 30px;
 .bookingCtaDiv{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   position: relative;
   bottom: 1.17em;
   max-width: 210px;
+  left: 25%;
 }
 
 input, textarea{
