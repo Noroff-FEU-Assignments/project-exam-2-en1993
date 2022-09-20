@@ -93,7 +93,7 @@ function AccommodationDetail() {
                 className={styles.bookNowCTA}
                 onClick={() => setShouldShowModal(!shouldShowModal)}
               >
-                {shouldShowModal ? "Book Now" : "Close"}
+                Book Now
               </button>
             </>
           </div>
