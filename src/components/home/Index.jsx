@@ -6,12 +6,20 @@ import { RiInformationFill } from "react-icons/ri";
 import { FaPhoneAlt } from "react-icons/fa";
 import { RiRestaurantFill } from "react-icons/ri";
 import FeaturedPost from "./Features";
+import homeVideo from "../images/pexels-kindel-media-7578541.mp4";
+import homeVide01 from "../images/pexels-kindel-media-9701047.mp4";
 
 const HomePage = () => {
   return (
     <>
       <main>
         <Heading content=" This is Home Page" />
+        <section>
+          <div className={styles.homeWelcomeVideo}>
+            <video src={homeVideo} controls="controls" autoPlay="autoPlay" />
+          </div>
+        </section>
+
         <section className="welcome-section">
           <div className="slider-wrapper">
             <HomePost />
@@ -21,7 +29,7 @@ const HomePage = () => {
           <Heading content="Services" size="2" />
           <div className={styles.servicesContainer}>
             <div className={styles.servicesContent}>
-              <RiInformationFill className={styles.servicesIcons}/>
+              <RiInformationFill className={styles.servicesIcons} />
               <Heading content="Information" size="3" />
               <p>
                 Ask us what kind of offer we have. Whether it is activity or if
@@ -44,9 +52,9 @@ const HomePage = () => {
           </div>
         </section>
         <section>
-          <Heading content="Features"size="2"/>
+          <Heading content="Features" size="2" />
           <div className={styles.featuredContainer}>
-            <FeaturedPost/>
+            <FeaturedPost />
           </div>
         </section>
       </main>

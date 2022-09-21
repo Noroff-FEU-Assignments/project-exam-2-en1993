@@ -47,8 +47,8 @@ export const BookingForm = () => {
               <label>Full Name</label>
               <input
                 type="text"
-                name="full name"
-                placeholder="Full Name"
+                name=" full name"
+                placeholder=" Type Full Name"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
               />
@@ -61,7 +61,7 @@ export const BookingForm = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="Email"
+                placeholder=" Type Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -78,7 +78,7 @@ export const BookingForm = () => {
                 id="message"
                 cols=""
                 rows=""
-                placeholder="Message"
+                placeholder=" Type Message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
@@ -94,7 +94,7 @@ export const BookingForm = () => {
             <input
               type="number"
               name="adults"
-              placeholder="Adult"
+              placeholder=" Type Number of Adult"
               value={adults}
               onChange={(e) => setAdults(Number(e.target.value))}
             />
@@ -107,7 +107,7 @@ export const BookingForm = () => {
             <input
               type="number"
               name="kids"
-              placeholder="Kids"
+              placeholder=" Type Number of Kids"
               value={kids}
               onChange={(e) => setKids(Number(e.target.value))}
             />
