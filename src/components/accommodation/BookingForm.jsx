@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { date } from "yup";
 import styles from "../accommodation/AccommodationPage.module.css";
 
@@ -9,7 +9,34 @@ export const BookingForm = () => {
   const [kids, setKids] = useState();
   const [checkIn, setCheckIn] = useState();
   const [checkOut, setCheckOut] = useState();
-  const [message, setMessage] = useState();
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrormessage] = useState("");
+
+  useEffect(() => {
+    if (fullName.length || message.length < 4) {
+      setErrormessage("Full Name required");
+    } else {
+      setErrormessage("");
+    }
+
+    // if (email.length < 4) {
+    //   setErrormessage("Full Name required");
+    // } else {
+    //   setErrormessage("");
+    // }
+
+    // if (adults.length || kids.length < 0) {
+    //   setErrormessage("Quantity required");
+    // } else {
+    //   setErrormessage("");
+    // }
+
+    // if (checkIn.length || checkOut.length < 0) {
+    //   setErrormessage("Date required");
+    // } else {
+    //   setErrormessage("");
+    // }
+  }, [fullName, email, adults, kids, checkIn, checkOut, message]);
 
   return (
     <form>
@@ -25,6 +52,9 @@ export const BookingForm = () => {
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
               />
+              <div className={styles.errorText}>
+                {errorMessage && <p>{errorMessage}</p>}
+              </div>
             </div>
             <div>
               <label>Email</label>
@@ -35,6 +65,9 @@ export const BookingForm = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              <div className={styles.errorText}>
+                {errorMessage && <p>{errorMessage}</p>}
+              </div>
             </div>
           </div>
           <div className={styles.bookingFormWrapperContent}>
@@ -49,6 +82,9 @@ export const BookingForm = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
+              <div className={styles.errorText}>
+                {errorMessage && <p>{errorMessage}</p>}
+              </div>
             </div>
           </div>
         </div>
@@ -60,8 +96,11 @@ export const BookingForm = () => {
               name="adults"
               placeholder="Adult"
               value={adults}
-              onChange={(e) => setAdults(e.target.value)}
+              onChange={(e) => setAdults(Number(e.target.value))}
             />
+            <div className={styles.errorText}>
+              {errorMessage && <p>{errorMessage}</p>}
+            </div>
           </div>
           <div>
             <label>kids</label>
@@ -70,8 +109,11 @@ export const BookingForm = () => {
               name="kids"
               placeholder="Kids"
               value={kids}
-              onChange={(e) => setKids(e.target.value)}
+              onChange={(e) => setKids(Number(e.target.value))}
             />
+            <div className={styles.errorText}>
+              {errorMessage && <p>{errorMessage}</p>}
+            </div>
           </div>
         </div>
         <div className={styles.dateContainer}>
@@ -84,6 +126,9 @@ export const BookingForm = () => {
               value={checkIn}
               onChange={(e) => setCheckIn(e.target.value)}
             />
+            <div className={styles.errorText}>
+              {errorMessage && <p>{errorMessage}</p>}
+            </div>
           </div>
 
           <div>
@@ -95,12 +140,21 @@ export const BookingForm = () => {
               value={checkOut}
               onChange={(e) => setCheckOut(e.target.value)}
             />
+            <div className={styles.errorText}>
+              {errorMessage && <p>{errorMessage}</p>}
+            </div>
           </div>
         </div>
-      </div>
-      <div className={styles.bookingCtaDiv}>
-        <button className={styles.bookingFormCTA}>Submit</button>
+        <div className={styles.bookingCtaDiv}>
+          <button className={styles.bookingFormCTA}>Submit</button>
+        </div>
       </div>
     </form>
   );
 };
+
+// function validateEmail(email) {
+//   const regEx = /\S+@\S+\.\S+/;
+//   const patternMatches = regEx.test(email);
+//   return patternMatches;
+// }

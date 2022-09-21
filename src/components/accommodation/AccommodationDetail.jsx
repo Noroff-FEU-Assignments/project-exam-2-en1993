@@ -60,46 +60,51 @@ function AccommodationDetail() {
   return (
     <>
       <Heading content="Specific Page" size="1" />
-      <div className={styles.productDetail}>
-        <div className={[styles.detailContents, styles.detailContent].join("")}>
-          <Heading content={post.name} size="2" />
-          <img
-            src={post.images[0].src}
-            alt={post.name}
-            className={styles.productDetailPicture}
-          />
-        </div>
-        <div className={styles.detailContent0}>
+      <main className={styles.productDetail}>
+        <section>
           <div
-            dangerouslySetInnerHTML={{ __html: post.description }}
-            className={styles.detailContent1}
-          />
-          <div className={styles.detailContent2}>
-            <p>From: ${post.prices.price.slice(0, 3)}</p>
-            <p>Per Night</p>
-
-            <div>
-              <FaPhoneAlt className={styles.productsIcons} />
-              <RiInformationFill className={styles.productsIcons} />
-              <RiRestaurantFill className={styles.productsIcons} />
-            </div>
-            <>
-              <BookingModal
-                shouldShow={shouldShowModal}
-                onRequestClose={() => setShouldShowModal(false)}
-              >
-                <BookingForm />
-              </BookingModal>
-              <button
-                className={styles.bookNowCTA}
-                onClick={() => setShouldShowModal(!shouldShowModal)}
-              >
-                Book Now
-              </button>
-            </>
+            className={[styles.detailContents, styles.detailContent].join("")}
+          >
+            <Heading content={post.name} size="2" />
+            <img
+              src={post.images[0].src}
+              alt={post.name}
+              className={styles.productDetailPicture}
+            />
           </div>
-        </div>
-      </div>
+          <div className={styles.detailContent0}>
+            <div
+              dangerouslySetInnerHTML={{ __html: post.description }}
+              className={styles.detailContent1}
+            />
+            <div className={styles.detailContent2}>
+              <p>From: ${post.prices.price.slice(0, 3)}</p>
+              <p>Per Night</p>
+
+              <div>
+                <FaPhoneAlt className={styles.productsIcons} />
+                <RiInformationFill className={styles.productsIcons} />
+                <RiRestaurantFill className={styles.productsIcons} />
+              </div>
+              <>
+                <BookingModal
+                  shouldShow={shouldShowModal}
+                  onRequestClose={() => setShouldShowModal(false)}
+                >
+                  <BookingForm />
+                </BookingModal>
+                <button
+                  className={styles.bookNowCTA}
+                  onClick={() => setShouldShowModal(!shouldShowModal)}
+                >
+                  Book Now
+                </button>
+              </>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
     </>
   );
 }

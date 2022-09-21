@@ -16,33 +16,6 @@ const AccommodationPage = () => {
         </section>
         <section>
           <Heading content="Our Accommodation" size="2"/>
-          {/* <div className={styles.accommFormWrapper}>
-            <form action="">
-              <b>Check In: </b>
-              <input
-                type="date"
-                placeholder="Check In"
-                className={styles.checkIn}
-              />
-              <b>Check Out: </b>
-              <input
-                type="date"
-                placeholder="CheckOut"
-                className={styles.checkOut}
-              />
-              <input
-                type="number"
-                placeholder="Adults"
-                className={styles.quantityAdults}
-              />
-              <input
-                type="number"
-                placeholder="Kids"
-                className={styles.quantityKids}
-              />
-              <button>Search</button>
-            </form>
-          </div> */}
           <div className={styles.productsWrapper}>
             <AccommodationList/>
           </div>

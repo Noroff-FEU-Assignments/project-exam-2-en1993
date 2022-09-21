@@ -12,6 +12,9 @@ import AccommodationPage from "./components/accommodation/AccommodationPage";
 import ContactPage from "./components/contact/ContactPage";
 import { AuthProvider } from "./context/AuthContext";
 import AccommodationDetail from "./components/accommodation/AccommodationDetail";
+import HotelsInquiry from "./components/admin/HotelsInquiry";
+import ContactInquiry from "./components/admin/ContactInquiry";
+import InquiryConfirmation from "./components/accommodation/InquiryConfirmation";
 
 function App() {
   return (
@@ -22,10 +25,13 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/accommodation" element={<AccommodationPage />} />
           <Route path="/accommodation/detail/:id" element={<AccommodationDetail />} />
+          <Route path="/accommodation/inquiryConfirmation" element={<InquiryConfirmation/>} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/admin/posts" element={<PostPage />} />
+          <Route path="/admin/hotelsInquiry" element={<HotelsInquiry/>} />
+          <Route path="/admin/contactInquiry" element={<ContactInquiry/>} />
           <Route path="/admin/posts/add" element={<AddPost />} />
           <Route path="/admin/posts/edit/:id" element={<EditPost />} />
         </Routes>
