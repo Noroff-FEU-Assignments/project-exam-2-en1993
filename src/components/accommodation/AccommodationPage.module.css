@@ -191,7 +191,7 @@ input[type="date" i] {
 .errorText{
   background: rgb(163, 68, 68);
   margin: 2px;
-  display: none;  
+  /* display: none;   */
 }
 
 

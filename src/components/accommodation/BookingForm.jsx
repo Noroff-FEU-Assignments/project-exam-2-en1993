@@ -12,34 +12,50 @@ export const BookingForm = () => {
   const [message, setMessage] = useState("");
   const [errorMessage, setErrormessage] = useState("");
 
-  useEffect(() => {
-    if (fullName.length || message.length < 4) {
-      setErrormessage("Full Name required");
-    } else {
-      setErrormessage("");
-    }
+  // useEffect(() => {
+  //   if (fullName.length < 4) {
+  //     setErrormessage("Full Name required");
+  //   } else {
+  //     setErrormessage("");
+  //   }
 
-    // if (email.length < 4) {
-    //   setErrormessage("Full Name required");
-    // } else {
-    //   setErrormessage("");
-    // }
+  //   if (email.length < 4) {
+  //     setErrormessage("Email required");
+  //   } else {
+  //     setErrormessage("");
+  //   }
 
-    // if (adults.length || kids.length < 0) {
-    //   setErrormessage("Quantity required");
-    // } else {
-    //   setErrormessage("");
-    // }
+  //   if (adults.length || kids.length < 0) {
+  //     setErrormessage("Quantity required");
+  //   } else {
+  //     setErrormessage("");
+  //   }
 
-    // if (checkIn.length || checkOut.length < 0) {
-    //   setErrormessage("Date required");
-    // } else {
-    //   setErrormessage("");
-    // }
-  }, [fullName, email, adults, kids, checkIn, checkOut, message]);
+  //   if (checkIn.length || checkOut.length < 0) {
+  //     setErrormessage("Date required");
+  //   } else {
+  //     setErrormessage("");
+  //   }
+  // }, [fullName, email, adults, kids, checkIn, checkOut, message]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const hotelsInquiry = {
+      fullName,
+      email,
+      adults,
+      kids,
+      checkIn,
+      checkOut,
+      message,
+    };
+
+    console.log("HOTELSINQUIRY:", hotelsInquiry);
+  };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className={styles.bookingFormWrapper}>
         <div className={styles.bookingFormWrapperContainer}>
           <div className={styles.bookingFormWrapperContent}>
@@ -48,6 +64,7 @@ export const BookingForm = () => {
               <input
                 type="text"
                 name=" full name"
+                required
                 placeholder=" Type Full Name"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
@@ -61,6 +78,7 @@ export const BookingForm = () => {
               <input
                 type="email"
                 name="email"
+                required
                 placeholder=" Type Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -76,8 +94,7 @@ export const BookingForm = () => {
               <textarea
                 name="message"
                 id="message"
-                cols=""
-                rows=""
+                required
                 placeholder=" Type Message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -94,6 +111,7 @@ export const BookingForm = () => {
             <input
               type="number"
               name="adults"
+              required
               placeholder=" Type Number of Adult"
               value={adults}
               onChange={(e) => setAdults(Number(e.target.value))}
@@ -107,6 +125,7 @@ export const BookingForm = () => {
             <input
               type="number"
               name="kids"
+              required
               placeholder=" Type Number of Kids"
               value={kids}
               onChange={(e) => setKids(Number(e.target.value))}
@@ -122,6 +141,7 @@ export const BookingForm = () => {
             <input
               type="date"
               name="Check In date"
+              required
               placeholder="Check In"
               value={checkIn}
               onChange={(e) => setCheckIn(e.target.value)}
@@ -136,6 +156,7 @@ export const BookingForm = () => {
             <input
               type="date"
               name="Check Out"
+              required
               placeholder="Check Out"
               value={checkOut}
               onChange={(e) => setCheckOut(e.target.value)}
