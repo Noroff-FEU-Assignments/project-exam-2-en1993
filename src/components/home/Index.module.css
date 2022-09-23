@@ -1,13 +1,24 @@
-h2, h3{
+h2,
+h3 {
   text-align: center;
-  font-family: 'Hepta Slab';
+  font-family: "Hepta Slab";
 }
-.homeWelcomeVideo video {
+
+/* .welcomeHeading h1 {
+  position: relative;
+  color: white;
+  background: #000000a1;
+  margin: 0 auto;
+  width: 146px;
+  top: 5.4em;
+} */
+
+.homeWelcomePicture img {
   width: 100%;
-  height: 54vh;
+  height: auto;
   margin: 0 auto;
 }
-.servicesContainer{
+.servicesContainer {
   max-width: 1000px;
   margin: 25px auto;
   display: flex;
@@ -16,24 +27,23 @@ h2, h3{
   gap: 15px;
 }
 
-.servicesContent{
+.servicesContent {
   max-width: 300px;
-  font-family: 'Spline Sans Mono';
-}
- 
-.servicesIcons{
- display: flex;
- justify-content: center;
- margin: 0px 45%;
- font-size: 35px;
+  font-family: "Spline Sans Mono";
 }
 
-section{
+.servicesIcons {
+  display: flex;
+  justify-content: center;
+  margin: 0px 45%;
+  font-size: 35px;
+}
+
+section {
   margin: 55px auto;
-
 }
 
-.featuredContainer{
+.featuredContainer {
   max-width: 1000px;
   margin: 25px auto;
   display: flex;
@@ -42,14 +52,20 @@ section{
   justify-content: center;
 }
 
-.featuredPic{
+.featuredPic {
   width: 310px;
   height: 250px;
 }
 
-.featuredContent h3{
+.featuredContent h3 {
   position: relative;
   bottom: 65px;
   background: var(--primary-color);
   margin: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .welcomeHeading h1 {
+    top: 7em;
+  }
 }

@@ -6,10 +6,10 @@ import image1 from "../images/pexels-stein-egil-liland-1933239.jpg";
 const ContactPage = () => {
   return (
     <>
-      <Heading content="Contact Page" size="1" />
+      <Heading content="Contact " size="1" />
       <main>
         <section>
-          <Heading content="Contact" size="2" />
+          <Heading content="Contact Us" size="2" />
           <div className={styles.welcomeContactPicture}></div>
         </section>
         <section>

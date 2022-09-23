@@ -18,25 +18,7 @@ export const BookingForm = () => {
   //   } else {
   //     setErrormessage("");
   //   }
-
-  //   if (email.length < 4) {
-  //     setErrormessage("Email required");
-  //   } else {
-  //     setErrormessage("");
-  //   }
-
-  //   if (adults.length || kids.length < 0) {
-  //     setErrormessage("Quantity required");
-  //   } else {
-  //     setErrormessage("");
-  //   }
-
-  //   if (checkIn.length || checkOut.length < 0) {
-  //     setErrormessage("Date required");
-  //   } else {
-  //     setErrormessage("");
-  //   }
-  // }, [fullName, email, adults, kids, checkIn, checkOut, message]);
+  // }, [fullName]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -83,9 +65,6 @@ export const BookingForm = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <div className={styles.errorText}>
-                {errorMessage && <p>{errorMessage}</p>}
-              </div>
             </div>
           </div>
           <div className={styles.bookingFormWrapperContent}>
@@ -99,9 +78,6 @@ export const BookingForm = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-              <div className={styles.errorText}>
-                {errorMessage && <p>{errorMessage}</p>}
-              </div>
             </div>
           </div>
         </div>
@@ -116,9 +92,6 @@ export const BookingForm = () => {
               value={adults}
               onChange={(e) => setAdults(Number(e.target.value))}
             />
-            <div className={styles.errorText}>
-              {errorMessage && <p>{errorMessage}</p>}
-            </div>
           </div>
           <div>
             <label>kids</label>
@@ -130,9 +103,6 @@ export const BookingForm = () => {
               value={kids}
               onChange={(e) => setKids(Number(e.target.value))}
             />
-            <div className={styles.errorText}>
-              {errorMessage && <p>{errorMessage}</p>}
-            </div>
           </div>
         </div>
         <div className={styles.dateContainer}>
@@ -146,9 +116,6 @@ export const BookingForm = () => {
               value={checkIn}
               onChange={(e) => setCheckIn(e.target.value)}
             />
-            <div className={styles.errorText}>
-              {errorMessage && <p>{errorMessage}</p>}
-            </div>
           </div>
 
           <div>
@@ -161,9 +128,6 @@ export const BookingForm = () => {
               value={checkOut}
               onChange={(e) => setCheckOut(e.target.value)}
             />
-            <div className={styles.errorText}>
-              {errorMessage && <p>{errorMessage}</p>}
-            </div>
           </div>
         </div>
         <div className={styles.bookingCtaDiv}>

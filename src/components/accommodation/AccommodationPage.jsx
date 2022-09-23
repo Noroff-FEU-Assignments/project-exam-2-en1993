@@ -8,16 +8,16 @@ const AccommodationPage = () => {
   return (
     <>
       <main>
-        <Heading content=" This is Accommodation Page" />
+        <Heading content=" Accommodation " />
         <section>
           <div className="slider-wrapper">
             <AccommodationPost />
           </div>
         </section>
         <section>
-          <Heading content="Our Accommodation" size="2"/>
+          <Heading content="Our Accommodation" size="2" />
           <div className={styles.productsWrapper}>
-            <AccommodationList/>
+            <AccommodationList />
           </div>
         </section>
       </main>

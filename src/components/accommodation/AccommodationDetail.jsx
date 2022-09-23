@@ -59,7 +59,7 @@ function AccommodationDetail() {
 
   return (
     <>
-      <Heading content="Specific Page" size="1" />
+      <Heading content="Accommodation Specifics " size="1" />
       <main className={styles.productDetail}>
         <section>
           <div

@@ -6,20 +6,19 @@ import { RiInformationFill } from "react-icons/ri";
 import { FaPhoneAlt } from "react-icons/fa";
 import { RiRestaurantFill } from "react-icons/ri";
 import FeaturedPost from "./Features";
-import homeVideo from "../images/pexels-kindel-media-7578541.mp4";
-import homeVide01 from "../images/pexels-kindel-media-9701047.mp4";
+
+import image1 from "../images/pexels-kseniya-kobi-8159777.jpg";
 
 const HomePage = () => {
   return (
     <>
       <main>
-        <Heading content=" This is Home Page" />
+        <Heading content=" Home " size="1" />
         <section>
-          <div className={styles.homeWelcomeVideo}>
-            <video src={homeVideo} controls="controls" autoPlay="autoPlay" />
+          <div className={styles.homeWelcomePicture}>
+            <img src={image1} alt="house and garden" />
           </div>
         </section>
-
         <section className="welcome-section">
           <div className="slider-wrapper">
             <HomePost />
@@ -52,7 +51,7 @@ const HomePage = () => {
           </div>
         </section>
         <section>
-          <Heading content="Features" size="2" />
+          <Heading content="Featured" size="2" />
           <div className={styles.featuredContainer}>
             <FeaturedPost />
           </div>
