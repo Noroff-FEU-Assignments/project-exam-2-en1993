@@ -34,7 +34,7 @@ export default function AccommodationLi() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loader"></div>;
   }
 
   if (error) {
@@ -49,7 +49,7 @@ export default function AccommodationLi() {
             <div className={styles.products}>
               <div className={styles.product}>
                 <img
-                  src={post.images[0].src}
+                  src={post?.images[0]?.src}
                   alt={post.name}
                   className={styles.productPicture}
                 />

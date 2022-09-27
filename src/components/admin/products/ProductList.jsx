@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import useAxios from "../../../hooks/useAxios";
 import Heading from "../../layout/Heading";
 
-export default function PostList() {
-  const [posts, setPosts] = useState([]);
+export default function ProductList() {
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -13,9 +13,10 @@ export default function PostList() {
   useEffect(function () {
     async function getMedia() {
       try {
-        const response = await http.get("wp/v2/posts");
+        // const response = await http.get("/wc/store/products");
+        const response = await http.get("/wp/v2/product");
         console.log("response", response);
-        setPosts(response.data);
+        setProducts(response.data);
       } catch (error) {
         console.log(error);
         setError(error.toString());
@@ -30,16 +31,18 @@ export default function PostList() {
   if (loading) return <div>Loading posts...</div>;
 
   if (error) return <div>{}</div>;
-
+  console.log(products);
   return (
     <>
-      <Heading content="  PostList Page" size="3" />
+      <Heading content="  ProductList Page" size="3" />
 
-      <ul className="posts">
-        {posts.map((media) => {
+      <ul className="products">
+        {products.map((media) => {
           return (
             <li key={media.id}>
-              <Link to={`/admin/posts/edit/${media.id}`}>
+              <Link to={`/admin/products/edit/${media.id}`}>
+                {/* {media.title.rendered} */}
+                {media.id}
                 {media.title.rendered}
               </Link>
             </li>

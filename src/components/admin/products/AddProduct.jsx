@@ -12,7 +12,7 @@ const schema = yup.object().shape({
   title: yup.string().required("Title is required"),
 });
 
-export default function AddPost() {
+export default function AddProduct() {
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState(null);
 
@@ -40,9 +40,10 @@ export default function AddPost() {
     console.log(data);
 
     try {
-      const response = await http.post("/wp/v2/posts", data);
-      console.log("response", response.data);
-      navigate.push("/admin/posts");
+      // const response = await http.post("/wp/v2/posts", data);
+      const response = await http.post("/wp/v2/product", data);
+      console.log("PRODUCTS-DATA:", response.data);
+      // navigate.push("/admin/products");
     } catch (error) {
       console.log("error", error);
       setServerError(error.tostring());
@@ -54,13 +55,13 @@ export default function AddPost() {
   return (
     <>
       <AdminPage>
-        <Heading content=" Add Post Page" size="2" />
+        <Heading content=" Add Product" size="2" />
         <form onSubmit={handleSubmit(onSubmit)}>
           {serverError && <FormError>{serverError}</FormError>}
           <fieldset disabled={submitting}>
             <div>
-              <label>Title</label>
-              <input name="title" placeholder="Title" {...register("title")} />
+              <label>Name</label>
+              <input name="title" placeholder="title" {...register("title")} />
               {errors.title && <FormError>{errors.title.message}</FormError>}
             </div>
             <div>

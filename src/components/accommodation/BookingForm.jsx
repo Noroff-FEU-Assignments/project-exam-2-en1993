@@ -10,7 +10,7 @@ export const BookingForm = () => {
   const [checkIn, setCheckIn] = useState();
   const [checkOut, setCheckOut] = useState();
   const [message, setMessage] = useState("");
-  const [errorMessage, setErrormessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   // useEffect(() => {
   //   if (fullName.length < 4) {

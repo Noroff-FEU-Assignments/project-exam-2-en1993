@@ -1,53 +1,65 @@
-.accommFormWrapper{
+.search {
+  display: flex;
+  justify-content: end;
+  max-width: 1000px;
+  margin: 55px auto;
+  position: relative;
+  right: 5%;
+}
+
+.accommFormWrapper {
   max-width: 1000px;
   margin: 25px auto;
 }
 
-.productPicture{
+.productPicture {
   width: 200px;
   height: 200px;
   margin: 0 auto;
   display: flex;
 }
 
-.products{
+.products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
 }
 
-.productsWrapper{
+.productsWrapper {
   max-width: 1000px;
   margin: 25px auto;
 }
-.product{
+.product {
   width: 300px;
   margin: 25px auto;
   text-align: center;
   /* border: 4px solid green; */
 }
 
-.productsIcons{
+.productsIcons {
   font-size: 30px;
   position: relative;
   /* left: 5rem; */
   padding: 10px;
 }
 
-.product h3{
+.product h3 {
   position: relative;
   bottom: 19px;
   border-bottom: 2px solid black;
 }
 
-.product{
-font-weight: bold;
+.product {
+  font-weight: bold;
 }
 
-.modalCloseCTA,.moreInfoCTA,.bookNowCTA,.bookingFormCTA{
-  font-family: 'Hepta Slab';
-  background:var(--primary-color) ;
+.modalCloseCTA,
+.moreInfoCTA,
+.bookNowCTA,
+.bookingFormCTA {
+  font-family: "Hepta Slab";
+  background: var(--primary-color);
   font-size: 21px;
   border: none;
   font-weight: bold;
@@ -56,7 +68,10 @@ font-weight: bold;
   text-decoration: none;
 }
 
-.modalCloseCTA:hover,.bookingFormCTA:hover, .bookNowCTA:hover, .moreInfoCTA:hover{
+.modalCloseCTA:hover,
+.bookingFormCTA:hover,
+.bookNowCTA:hover,
+.moreInfoCTA:hover {
   background: var(--secondary-color);
   color: var(--primary-color);
   cursor: pointer;
@@ -64,7 +79,7 @@ font-weight: bold;
 
 /* Detail pagee */
 
-.productDetail{
+.productDetail {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
@@ -73,30 +88,30 @@ font-weight: bold;
   padding: 10px;
 }
 
-.productDetailPicture{
+.productDetailPicture {
   width: 100%;
   height: 100%;
 }
 
-.detailContent{
+.detailContent {
   max-width: 700px;
   max-height: 450px;
   margin-top: -3em;
 }
 
-.detailContent0{
+.detailContent0 {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 0em;
 }
 
-.detailContent1{
+.detailContent1 {
   max-width: 380px;
   margin: 0 auto;
 }
 
-.detailContent2{
+.detailContent2 {
   max-width: 300px;
   font-weight: bold;
   margin: 0 auto;
@@ -104,7 +119,7 @@ font-weight: bold;
 
 /* Booking Modal */
 
-.modalBackground{
+.modalBackground {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -116,8 +131,7 @@ font-weight: bold;
   top: 9em;
 }
 
-
-.modalBody{
+.modalBody {
   background-color: rgba(255, 255, 255, 0.712);
   margin: 10% auto;
   padding: 20%;
@@ -125,12 +139,12 @@ font-weight: bold;
   height: 100%;
 }
 
-label{
-display: block;
-margin: 6px 0px;
+label {
+  display: block;
+  margin: 6px 0px;
 }
 
-.bookingFormWrapper{
+.bookingFormWrapper {
   max-width: 300px;
   margin: 0 auto;
   display: flex;
@@ -138,7 +152,9 @@ margin: 6px 0px;
   gap: 15px;
 }
 
-.personQuantity,.bookingFormWrapperContainer,.dateContainer{
+.personQuantity,
+.bookingFormWrapperContainer,
+.dateContainer {
   max-width: 460px;
   margin: 0 auto;
   display: flex;
@@ -146,21 +162,20 @@ margin: 6px 0px;
   gap: 15px;
 }
 
-.personQuantity{
+.personQuantity {
   position: relative;
   bottom: 17px;
 }
-.dateContainer{
-position: relative;
-bottom: 30px;
-
+.dateContainer {
+  position: relative;
+  bottom: 30px;
 }
 
-.dateContainer input{
+.dateContainer input {
   width: 197px;
 }
 
-.bookingCtaDiv{
+.bookingCtaDiv {
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -168,57 +183,53 @@ bottom: 30px;
   margin: 0 auto;
 }
 
-input, textarea{
+input,
+textarea {
   width: 195px;
-  font-weight:bold ;
-  font-family: 'Hepta Slab';
+  font-weight: bold;
+  font-family: "Hepta Slab";
   border: 2px solid var(--secondary-color);
 }
 
-input{
+input {
   height: 26px;
-  
 }
 
-textarea{
+textarea {
   height: 91px;
 }
 
 input[type="date" i] {
-  font-family: 'Hepta Slab';
+  font-family: "Hepta Slab";
 }
 
-.errorText{
+.errorText {
   background: rgb(163, 68, 68);
   margin: 2px;
   /* display: none;   */
 }
 
-
-@media only screen and (min-width: 1024px){
-
-  .productDetail{
+@media only screen and (min-width: 1024px) {
+  .productDetail {
     position: relative;
     top: 1em;
   }
 
-  .modalBody{
+  .modalBody {
     width: 45%;
     padding: 5%;
     height: 45%;
   }
 
-  .bookingFormWrapper{
+  .bookingFormWrapper {
     max-width: 485px;
   }
 
-  .bookingCtaDiv{
+  .bookingCtaDiv {
     max-width: 400px;
   }
 
-  .detailContent0{
+  .detailContent0 {
     margin-top: 13em;
   }
-  
-
 }

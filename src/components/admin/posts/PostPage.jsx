@@ -8,7 +8,7 @@ const PostPage = () => {
   return (
     <>
       <AdminPage>
-        <Heading content=" This is Post Page" size="2" />
+        <Heading content="  Post Page" size="2" />
         <p>
           <Link to="/admin/posts/add">Add post</Link>
         </p>

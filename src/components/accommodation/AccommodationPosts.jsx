@@ -29,7 +29,7 @@ export default function AccommodationPost() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loader"></div>;
   }
 
   if (error) {
@@ -77,7 +77,7 @@ export default function AccommodationPost() {
                 <div className="show">
                   <Heading content={post.name} size="3" />
                   <img
-                    src={post.images[0].src}
+                    src={post?.images[0]?.src}
                     alt={post.name}
                     className="slideImage"
                   />

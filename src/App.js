@@ -15,6 +15,9 @@ import AccommodationDetail from "./components/accommodation/AccommodationDetail"
 import HotelsInquiry from "./components/admin/HotelsInquiry";
 import ContactInquiry from "./components/admin/ContactInquiry";
 import InquiryConfirmation from "./components/accommodation/InquiryConfirmation";
+import ProductPage from "./components/admin/products/ProductPage";
+import AddProduct from "./components/admin/products/AddProduct";
+import EditProduct from "./components/admin/products/EditProduct";
 
 function App() {
   return (
@@ -30,10 +33,13 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/admin/posts" element={<PostPage />} />
+          <Route path="/admin/products" element={<ProductPage/>} />
           <Route path="/admin/hotelsInquiry" element={<HotelsInquiry/>} />
           <Route path="/admin/contactInquiry" element={<ContactInquiry/>} />
           <Route path="/admin/posts/add" element={<AddPost />} />
+          <Route path="/admin/products/add" element={<AddProduct/>} />
           <Route path="/admin/posts/edit/:id" element={<EditPost />} />
+          <Route path="/admin/products/edit/:id" element={<EditProduct/>} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
