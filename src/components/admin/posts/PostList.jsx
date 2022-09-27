@@ -27,7 +27,7 @@ export default function PostList() {
     getMedia();
   }, []);
 
-  if (loading) return <div>Loading posts...</div>;
+  if (loading) return <div className="loader"></div>;
 
   if (error) return <div>{}</div>;
 

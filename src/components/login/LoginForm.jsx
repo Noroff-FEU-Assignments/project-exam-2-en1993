@@ -52,7 +52,7 @@ export default function LoginForm() {
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         {loginError && <FormError>{loginError}</FormError>}
-        <fieldset disabled={submitting}>
+        <div className="login" disabled={submitting}>
           <div>
             <label>Username</label>
             <input
@@ -76,8 +76,8 @@ export default function LoginForm() {
               <FormError>{errors.password.message}</FormError>
             )}
           </div>
-          <button>{submitting ? "Loggin in..." : "Login"}</button>
-        </fieldset>
+          <button className="loginCta">{submitting ? "Loggin in..." : "Login"}</button>
+        </div>
       </form>
     </>
   );

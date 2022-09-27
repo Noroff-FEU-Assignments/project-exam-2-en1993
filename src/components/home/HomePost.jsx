@@ -29,7 +29,7 @@ export default function HomePost() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loader"></div>;
   }
 
   if (error) {

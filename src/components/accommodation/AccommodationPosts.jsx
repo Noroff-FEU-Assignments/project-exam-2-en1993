@@ -36,15 +36,7 @@ export default function AccommodationPost() {
     return <div>An error occured : {error} </div>;
   }
 
-  // for (let i = 0; i < posts.length; i++) {
-  //   if (i === 3) {
-  //     break;
-  //   }
-  // }
-
-  // for (let i = id  posts.id = id.0 && id.8 && id.9; i++) {
-  //   if(i === id){ break; }
-  // }
+ 
 
   function galleryShowing(galleryShow) {
     var shows = document.querySelectorAll(

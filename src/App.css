@@ -181,8 +181,7 @@ ul.products {
   display: grid;
   background-color: white;
   margin-bottom: 5px;
-  padding: 10px;
-  position: relative;
+  position: unset;
 }
 
 .success {
@@ -193,15 +192,11 @@ ul.products {
   border: none;
 }
 
-.delete {
+/* .delete {
   background: rgba(165, 5, 5, 0.995);
   color: white;
   border: none;
-}
-
-.editContent {
-  position: relative;
-}
+} */
 
 .slider-wrapper {
   max-width: 1000px;
@@ -234,10 +229,10 @@ ul.products {
 
 .loader {
   margin: 0 auto;
-  border: 15px solid rgba(185, 145, 14, 0.666);
+  border: 15px solid var(--primary-color);
   width: 65px;
   height: 65px;
-  border-top: 15px solid rgba(12, 12, 12, 0.666);
+  border-top: 15px solid var(--secondary-color);
   border-radius: 50%;
   animation: spin 2s linear infinite;
   position: relative;
@@ -250,4 +245,59 @@ ul.products {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.editCtas {
+  display: inline-grid;
+}
+
+.updateCTA,
+.addCta,
+.loginCta {
+  font-family: "Hepta Slab";
+  background: var(--primary-color);
+  font-size: 21px;
+  border: none;
+  font-weight: bold;
+  padding: 3px 10px;
+  margin: 10px 0px;
+  text-decoration: none;
+}
+
+.updateCTA:hover,
+.addCTA:hover,
+.loginCta:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.deleteCTA {
+  font-family: "Hepta Slab";
+  color: white;
+  background: rgb(186, 9, 9);
+  font-size: 21px;
+  border: none;
+  font-weight: bold;
+  padding: 3px 10px;
+  margin: 10px 0px;
+  text-decoration: none;
+}
+
+.deleteCTA:hover {
+  background: white;
+  color: rgb(186, 9, 9);
+  cursor: pointer;
+  border: 2px solid rgb(186, 9, 9);
+}
+
+.addContent,
+.editContent,
+.login {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.editContent {
+  position: relative;
 }

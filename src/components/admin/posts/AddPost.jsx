@@ -57,7 +57,7 @@ export default function AddPost() {
         <Heading content=" Add Post Page" size="2" />
         <form onSubmit={handleSubmit(onSubmit)}>
           {serverError && <FormError>{serverError}</FormError>}
-          <fieldset disabled={submitting}>
+          <div className="addContent" disabled={submitting}>
             <div>
               <label>Title</label>
               <input name="title" placeholder="Title" {...register("title")} />
@@ -72,8 +72,8 @@ export default function AddPost() {
               />
             </div>
 
-            <button>{submitting ? "Submitting..." : "Submit"}</button>
-          </fieldset>
+            <button className="addCta">{submitting ? "Submitting..." : "Submit"}</button>
+          </div>
         </form>
       </AdminPage>
     </>

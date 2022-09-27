@@ -9,7 +9,7 @@ export default function DeleteProductButton({ id }) {
   const http = useAxios();
   const navigate = useNavigate();
 
-  const url = `/wc/store/products/${id}`;
+  const url = `/wp/v2/product/${id}`;
 
   async function handleDelete() {
     const confirmDelete = window.confirm("Delete this product?");
@@ -24,7 +24,7 @@ export default function DeleteProductButton({ id }) {
     }
   }
   return (
-    <button type="button" className="delete" onClick={handleDelete}>
+    <button type="button" className="deleteCTA" onClick={handleDelete}>
       {error ? "Deleted" : "Delete"}
     </button>
   );

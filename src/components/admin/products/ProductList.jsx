@@ -28,27 +28,28 @@ export default function ProductList() {
     getMedia();
   }, []);
 
-  if (loading) return <div>Loading posts...</div>;
+  if (loading) return <div className="loader"></div>;
 
   if (error) return <div>{}</div>;
   console.log(products);
   return (
     <>
       <Heading content="  ProductList Page" size="3" />
-
-      <ul className="products">
-        {products.map((media) => {
-          return (
-            <li key={media.id}>
-              <Link to={`/admin/products/edit/${media.id}`}>
-                {/* {media.title.rendered} */}
-                {media.id}
-                {media.title.rendered}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <div>
+        <ul className="products">
+          {products.map((media) => {
+            return (
+              <li key={media.id}>
+                <Link to={`/admin/products/edit/${media.id}`}>
+                  {/* {media.title.rendered} */}
+                  {media.id}
+                  {media.title.rendered}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 }
