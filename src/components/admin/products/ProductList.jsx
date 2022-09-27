@@ -42,7 +42,6 @@ export default function ProductList() {
               <li key={media.id}>
                 <Link to={`/admin/products/edit/${media.id}`}>
                   {/* {media.title.rendered} */}
-                  {media.id}
                   {media.title.rendered}
                 </Link>
               </li>

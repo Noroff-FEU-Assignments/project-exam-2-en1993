@@ -51,7 +51,7 @@ export default function LoginForm() {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        {loginError && <FormError>{loginError}</FormError>}
+        {/* {loginError && <FormError>{loginError}</FormError>} */}
         <div className="login" disabled={submitting}>
           <div>
             <label>Username</label>
@@ -76,7 +76,9 @@ export default function LoginForm() {
               <FormError>{errors.password.message}</FormError>
             )}
           </div>
-          <button className="loginCta">{submitting ? "Loggin in..." : "Login"}</button>
+          <button className="loginCta">
+            {submitting ? "Loggin in..." : "Login"}
+          </button>
         </div>
       </form>
     </>
