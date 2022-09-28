@@ -15,7 +15,7 @@ export default function FeaturedPost() {
 
         if (response.ok) {
           const json = await response.json();
-          console.log("HOMEPOST:", json);
+          console.log("FEATURED-POST:", json);
           setPosts(json);
         } else {
           setError("An error occured");
@@ -41,7 +41,7 @@ export default function FeaturedPost() {
     <>
       {posts
         .filter(function (post) {
-          return post.id === 625 || post.id === 658 || post.id === 660;
+          return post.id === 623 || post.id === 624 || post.id === 627;
         })
         .map(function (post) {
           return (

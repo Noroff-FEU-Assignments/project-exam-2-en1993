@@ -5,6 +5,8 @@ import styles from "../home/Index.module.css";
 import { RiInformationFill } from "react-icons/ri";
 import { FaPhoneAlt } from "react-icons/fa";
 import { RiRestaurantFill } from "react-icons/ri";
+import { RiArrowRightSLine } from "react-icons/ri";
+import { RiArrowLeftSLine } from "react-icons/ri";
 import FeaturedPost from "./Featured";
 
 import image1 from "../images/pexels-kseniya-kobi-8159777.jpg";
@@ -21,6 +23,8 @@ const HomePage = () => {
         </section>
         <section className="welcome-section">
           <div className="slider-wrapper">
+            <RiArrowRightSLine className={styles.arrowIcons} />
+            <RiArrowLeftSLine className={styles.arrowIcons} />
             <HomePost />
           </div>
         </section>
