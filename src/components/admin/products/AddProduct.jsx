@@ -56,7 +56,7 @@ export default function AddProduct() {
     <>
       <AdminPage>
         <Heading content=" Add Product" size="2" />
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="addProductForm" onSubmit={handleSubmit(onSubmit)}>
           {serverError && <FormError>{serverError}</FormError>}
           <div className="addContent" disabled={submitting}>
             <div>

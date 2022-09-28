@@ -5,7 +5,7 @@ import styles from "../home/Index.module.css";
 import { RiInformationFill } from "react-icons/ri";
 import { FaPhoneAlt } from "react-icons/fa";
 import { RiRestaurantFill } from "react-icons/ri";
-import FeaturedPost from "./Features";
+import FeaturedPost from "./Featured";
 
 import image1 from "../images/pexels-kseniya-kobi-8159777.jpg";
 

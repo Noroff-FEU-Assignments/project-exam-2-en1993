@@ -22,6 +22,7 @@ const SearchBar = () => {
     productsToRender.push(...newProducts)(
       productsToRender.length ? productsToRender : { PRODUCTS_API }
     );
+    console.log("SEARCHING:", searchName);
   };
 
   return (
