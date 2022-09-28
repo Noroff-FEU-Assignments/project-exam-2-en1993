@@ -73,7 +73,7 @@ export default function EditProduct() {
     <>
       <AdminPage>
         <Heading content="  Edit Product Page" size="2" />
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="editProductForm" onSubmit={handleSubmit(onSubmit)}>
           {updated && <div className="success"> The product was updated </div>}
           {updateError && <FormError>{updateError}</FormError>}
           <div disabled={updatingProduct} className="editContent">

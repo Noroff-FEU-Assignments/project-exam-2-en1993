@@ -55,7 +55,7 @@ export default function AddPost() {
     <>
       <AdminPage>
         <Heading content=" Add Post Page" size="2" />
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="addPostForm" onSubmit={handleSubmit(onSubmit)}>
           {serverError && <FormError>{serverError}</FormError>}
           <div className="addContent" disabled={submitting}>
             <div>

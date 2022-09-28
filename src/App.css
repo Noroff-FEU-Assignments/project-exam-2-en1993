@@ -43,6 +43,19 @@ body {
   --third-color: white;
   --links-color: blue;
 }
+/* :root {
+  --primary-color: #ffab24;
+  --secondary-color: #023901;
+  --third-color: white;
+  --links-color: blue;
+} */
+
+/* :root {
+  --primary-color: #00ffe1;
+  --secondary-color: #4d2701;
+  --third-color: white;
+  --links-color: blue;
+} */
 .form-error {
   background: rgb(221, 88, 88);
   color: rgb(107, 9, 9);
@@ -73,7 +86,7 @@ header {
 }
 
 ul {
-  background: black;
+  background: var(--secondary-color);
   position: absolute;
   width: 100%;
   top: 70px;
@@ -176,6 +189,7 @@ li a:hover {
 ul.posts a,
 ul.products a {
   font-weight: bold;
+  font-size: 19px;
   color: var(--links-color);
 }
 
@@ -306,6 +320,9 @@ ul.products {
   position: relative;
 }
 
-.addProductForm {
+.addProductForm,
+.editProductForm,
+.addPostForm,
+.editPostForm {
   display: flex;
 }

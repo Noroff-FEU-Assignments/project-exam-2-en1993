@@ -73,7 +73,7 @@ export default function EditPost() {
     <>
       <AdminPage>
         <Heading content=" This is Edit Post Page" size="2" />
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="editPostForm" onSubmit={handleSubmit(onSubmit)}>
           {updated && <div className="success"> The post was updated </div>}
           {updateError && <FormError>{updateError}</FormError>}
           <div disabled={updatingPost} className="editContent">
