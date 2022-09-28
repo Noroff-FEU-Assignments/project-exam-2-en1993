@@ -73,44 +73,59 @@ export default function EditProduct() {
     <>
       <AdminPage>
         <Heading content="  Edit Product Page" size="2" />
-        <form className="editProductForm" onSubmit={handleSubmit(onSubmit)}>
-          {updated && <div className="success"> The product was updated </div>}
-          {updateError && <FormError>{updateError}</FormError>}
-          <div disabled={updatingProduct} className="editContent">
-            <div>
-              <label>Title</label>
-              {/* defaultValue={product.name.rendered} */}
-              <input
-                name="title"
-                defaultValue={product.title.rendered}
-                placeholder="title"
-                {...register("title")}
-              />
-              {errors.title && <FormError>{errors.title.message}</FormError>}
-            </div>
-            <div>
-              <label>Price</label>
-              <input name="price" placeholder="price" {...register("price")} />
-            </div>
-            <div>
-              <label>Image</label>
-              <input name="url" placeholder="image" {...register("url")} />
-            </div>
-            <div>
-              <label>Content</label>
-              <input
-                name="content"
-                defaultValue={product.content.rendered}
-                placeholder="Content"
-                {...register("content")}
-              />
-            </div>
-            <div className="editCtas">
-              <button className="updateCTA">Update</button>
-              <DeleteProductButton id={product.id} />
-            </div>
+        <div>
+          <div>
+            {updated && (
+              <div className="success"> The product was updated </div>
+            )}
           </div>
-        </form>
+          <form className="editProductForm" onSubmit={handleSubmit(onSubmit)}>
+            {updateError && <FormError>{updateError}</FormError>}
+            <div disabled={updatingProduct} className="editContent">
+              <div>
+                <label>Title</label>
+                {/* defaultValue={product.name.rendered} */}
+                <input
+                  name="title"
+                  defaultValue={product.title.rendered}
+                  placeholder="title"
+                  {...register("title")}
+                />
+                {errors.title && <FormError>{errors.title.message}</FormError>}
+              </div>
+              <div>
+                <label>Price</label>
+                <input
+                  name="prices"
+                  placeholder="price"
+                  {...register("price")}
+                />
+              </div>
+              <div>
+                <label>Image</label>
+                <input
+                  name="image"
+                  // defaultValue={product?.images[0]?.src}
+                  placeholder="image"
+                  {...register("image")}
+                />
+              </div>
+              <div>
+                <label>Content</label>
+                <input
+                  name="content"
+                  defaultValue={product.content.rendered}
+                  placeholder="Content"
+                  {...register("content")}
+                />
+              </div>
+              <div className="editCtas">
+                <button className="updateCTA">Update</button>
+                <DeleteProductButton id={product.id} />
+              </div>
+            </div>
+          </form>
+        </div>
       </AdminPage>
     </>
   );

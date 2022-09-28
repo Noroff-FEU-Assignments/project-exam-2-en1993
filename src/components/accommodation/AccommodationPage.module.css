@@ -60,6 +60,7 @@
 .bookingFormCTA {
   font-family: "Hepta Slab";
   background: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 21px;
   border: none;
   font-weight: bold;

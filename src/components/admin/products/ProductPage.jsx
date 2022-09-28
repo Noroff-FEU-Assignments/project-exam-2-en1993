@@ -3,7 +3,6 @@ import AdminPage from "../AdminPage";
 import { Link } from "react-router-dom";
 import ProductList from "./ProductList";
 
-
 const ProductPage = () => {
   return (
     <>
@@ -13,7 +12,7 @@ const ProductPage = () => {
           <Link to="/admin/products/add">Add product</Link>
         </p>
         <p>List products here</p>
-        <ProductList/>
+        <ProductList />
       </AdminPage>
     </>
   );

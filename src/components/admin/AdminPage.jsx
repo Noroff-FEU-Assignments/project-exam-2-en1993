@@ -1,9 +1,7 @@
 import Footer from "../layout/footer/Footer";
 import Heading from "../layout/Heading";
 import AdminMenu from "./AdminMenu";
-import PropTypes from 'prop-types';
-
-
+import PropTypes from "prop-types";
 
 export default function AdminPage({ children }) {
   return (
@@ -15,9 +13,9 @@ export default function AdminPage({ children }) {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
 AdminPage.propTypes = {
-  children : PropTypes.node,
+  children: PropTypes.node,
 };

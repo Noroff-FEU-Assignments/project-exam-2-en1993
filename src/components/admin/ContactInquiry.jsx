@@ -1,4 +1,3 @@
-
 import Heading from "../layout/Heading";
 import AdminPage from "./AdminPage";
 

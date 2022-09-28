@@ -69,3 +69,8 @@ section {
     top: 7em;
   }
 }
+
+.arrowIcons {
+  font-size: 35px;
+  cursor: pointer;
+}

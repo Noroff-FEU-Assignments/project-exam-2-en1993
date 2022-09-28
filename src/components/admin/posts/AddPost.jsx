@@ -72,7 +72,9 @@ export default function AddPost() {
               />
             </div>
 
-            <button className="addCta">{submitting ? "Submitting..." : "Submit"}</button>
+            <button className="addCTA">
+              {submitting ? "Submitting..." : "Submit"}
+            </button>
           </div>
         </form>
       </AdminPage>

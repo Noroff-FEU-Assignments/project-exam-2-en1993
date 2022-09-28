@@ -69,8 +69,12 @@ export default function AddProduct() {
               <input name="price" placeholder="price" {...register("price")} />
             </div>
             <div>
-              <label>Image</label>
-              <input name="url" placeholder="image" {...register("url")} />
+              <label>Image Url</label>
+              <input
+                name="image"
+                placeholder="image url"
+                {...register("image")}
+              />
             </div>
             <div>
               <label>Content</label>
@@ -81,7 +85,7 @@ export default function AddProduct() {
               />
             </div>
 
-            <button className="addCta">
+            <button className="addCTA">
               {submitting ? "Submitting..." : "Submit"}
             </button>
           </div>

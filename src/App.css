@@ -47,6 +47,12 @@ body {
   --primary-color: #ffab24;
   --secondary-color: #023901;
   --third-color: white;
+  --links-color: blue; 
+}*/
+/* :root {
+  --primary-color: #96fce5;
+  --secondary-color: #00574d;
+  --third-color: white;
   --links-color: blue;
 } */
 
@@ -208,6 +214,8 @@ ul.products {
   background: rgb(5, 111, 5);
   color: white;
   border: none;
+  width: 175px;
+  margin: 0 auto;
 }
 
 /* .delete {
@@ -270,9 +278,10 @@ ul.products {
 }
 
 .updateCTA,
-.addCta,
+.addCTA,
 .loginCta {
   font-family: "Hepta Slab";
+  color: var(--secondary-color);
   background: var(--primary-color);
   font-size: 21px;
   border: none;
