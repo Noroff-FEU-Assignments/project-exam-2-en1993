@@ -1,0 +1,38 @@
+.ContactFormWrapper label {
+  display: block;
+  margin: 6px 0px;
+}
+
+.ContactFormWrapper input {
+  height: 30px;
+  width: 255px;
+  font-weight: bold;
+  font-family: "Spline Sans Mono";
+  border: 2px solid var(--secondary-color);
+}
+
+.ContactFormWrapper textarea {
+  height: 91px;
+  width: 255px;
+  font-weight: bold;
+  font-family: "Spline Sans Mono";
+  border: 2px solid var(--secondary-color);
+}
+
+.ContactFormCTA {
+  font-family: "Hepta Slab";
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  font-size: 21px;
+  border: none;
+  font-weight: bold;
+  padding: 3px 10px;
+  margin: 10px 0px;
+  text-decoration: none;
+}
+
+.ContactFormCTA:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}

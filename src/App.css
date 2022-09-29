@@ -37,9 +37,21 @@ body {
   margin: 15px auto;
 }
 
-:root {
+/* :root {
   --primary-color: #fff091;
   --secondary-color: #000000;
+  --third-color: white;
+  --links-color: blue;
+} */
+/* :root {
+  --primary-color: #96fce5;
+  --secondary-color: #00574d;
+  --third-color: white;
+  --links-color: blue;
+} */
+:root {
+  --primary-color: #a0e087;
+  --secondary-color: #0e3303;
   --third-color: white;
   --links-color: blue;
 }
@@ -48,7 +60,7 @@ body {
   --secondary-color: #023901;
   --third-color: white;
   --links-color: blue; 
-}*/
+} */
 /* :root {
   --primary-color: #96fce5;
   --secondary-color: #00574d;
@@ -214,15 +226,9 @@ ul.products {
   background: rgb(5, 111, 5);
   color: white;
   border: none;
-  width: 175px;
+  width: 229px;
   margin: 0 auto;
 }
-
-/* .delete {
-  background: rgba(165, 5, 5, 0.995);
-  color: white;
-  border: none;
-} */
 
 .slider-wrapper {
   max-width: 1000px;
@@ -334,4 +340,29 @@ ul.products {
 .addPostForm,
 .editPostForm {
   display: flex;
+}
+
+.addContent label,
+.editContent label,
+.login label {
+  display: block;
+  margin: 6px 0px;
+}
+
+.addContent textarea,
+.editContent textarea {
+  height: 91px;
+  width: 255px;
+  font-weight: bold;
+  font-family: "Spline Sans Mono";
+  border: 2px solid var(--secondary-color);
+}
+.addContent input,
+.editContent input,
+.login input {
+  height: 30px;
+  width: 255px;
+  font-weight: bold;
+  font-family: "Spline Sans Mono";
+  border: 2px solid var(--secondary-color);
 }

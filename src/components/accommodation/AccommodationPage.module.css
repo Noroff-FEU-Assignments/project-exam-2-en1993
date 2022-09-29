@@ -141,11 +141,6 @@
   height: 100%;
 }
 
-label {
-  display: block;
-  margin: 6px 0px;
-}
-
 .bookingFormWrapper {
   max-width: 300px;
   margin: 0 auto;
@@ -185,30 +180,29 @@ label {
   margin: 0 auto;
 }
 
-input,
-textarea {
+.bookingFormWrapper label {
+  display: block;
+  margin: 6px 0px;
+}
+
+.bookingFormWrapper input,
+.bookingFormWrapper textarea {
   width: 195px;
   font-weight: bold;
   font-family: "Hepta Slab";
   border: 2px solid var(--secondary-color);
 }
 
-input {
+.bookingFormWrapper input {
   height: 26px;
 }
 
-textarea {
+.bookingFormWrapper textarea {
   height: 91px;
 }
 
-input[type="date" i] {
+.bookingFormWrapper input[type="date" i] {
   font-family: "Hepta Slab";
-}
-
-.errorText {
-  background: rgb(163, 68, 68);
-  margin: 2px;
-  /* display: none;   */
 }
 
 @media only screen and (min-width: 1024px) {

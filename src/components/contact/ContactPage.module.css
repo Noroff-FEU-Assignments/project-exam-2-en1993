@@ -1,26 +1,31 @@
 .welcomeContactPicture {
   background-image: url(../images/pexels-thanhhoa-tran-1488327.jpg);
   width: 80%;
-  height: 65vh;
+  height: 55vh;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
 }
 
-.contactContent {
+.contactContent,
+.contactForm {
+  /* max-width: 600px; */
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.locationContent {
   width: 80%;
-  height: 45vh;
   margin: 0 auto;
 }
 
-.contactContent0 {
-  width: 40%;
-  height: 45vh;
+iframe {
+  width: 450px;
+  height: 350px;
 }
 
 .contactPic {
-  width: 100%;
-  height: auto;
+  max-width: 450px;
+  height: 350px;
 }

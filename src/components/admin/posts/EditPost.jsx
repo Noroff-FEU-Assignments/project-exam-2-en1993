@@ -73,35 +73,39 @@ export default function EditPost() {
     <>
       <AdminPage>
         <Heading content=" This is Edit Post Page" size="2" />
-        <form className="editPostForm" onSubmit={handleSubmit(onSubmit)}>
-          {updated && <div className="success"> The post was updated </div>}
-          {updateError && <FormError>{updateError}</FormError>}
-          <div disabled={updatingPost} className="editContent">
-            <div>
-              <label>Title</label>
-              <input
-                name="title"
-                defaultValue={post.title.rendered}
-                placeholder="Title"
-                {...register("title")}
-              />
-              {errors.title && <FormError>{errors.title.message}</FormError>}
-            </div>
-            <div>
-              <label>Content</label>
-              <input
-                name="content"
-                defaultValue={post.content.rendered}
-                placeholder="Content"
-                {...register("content")}
-              />
-            </div>
-            <div className="editCtas">
-              <button className="updateCTA">Update</button>
-              <DeletePostButton id={post.id} />
-            </div>
+        <div>
+          <div>
+            {updated && <div className="success"> The post was updated </div>}
           </div>
-        </form>
+          <form className="editPostForm" onSubmit={handleSubmit(onSubmit)}>
+            {updateError && <FormError>{updateError}</FormError>}
+            <div disabled={updatingPost} className="editContent">
+              <div>
+                <label>Title</label>
+                <input
+                  name="title"
+                  defaultValue={post.title.rendered}
+                  placeholder="Title"
+                  {...register("title")}
+                />
+                {errors.title && <FormError>{errors.title.message}</FormError>}
+              </div>
+              <div>
+                <label>Content</label>
+                <input
+                  name="content"
+                  defaultValue={post.content.rendered}
+                  placeholder="Content"
+                  {...register("content")}
+                />
+              </div>
+              <div className="editCtas">
+                <button className="updateCTA">Update</button>
+                <DeletePostButton id={post.id} />
+              </div>
+            </div>
+          </form>
+        </div>
       </AdminPage>
     </>
   );
