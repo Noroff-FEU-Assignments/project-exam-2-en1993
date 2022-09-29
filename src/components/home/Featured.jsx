@@ -48,7 +48,7 @@ export default function FeaturedPost() {
           return (
             <div key={post.id}>
               <motion.div
-                whileHover={{ scale: 1 }}
+                whileHover={{ scale: 1.1 }}
                 className={styles.featuredContent}
               >
                 <img
