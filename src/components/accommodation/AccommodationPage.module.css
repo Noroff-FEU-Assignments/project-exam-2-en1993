@@ -7,6 +7,14 @@
   right: 5%;
 }
 
+.search input {
+  width: 185px;
+  height: 30px;
+  font-weight: bold;
+  font-family: "Hepta Slab";
+  border: 2px solid var(--secondary-color);
+}
+
 .accommFormWrapper {
   max-width: 1000px;
   margin: 25px auto;

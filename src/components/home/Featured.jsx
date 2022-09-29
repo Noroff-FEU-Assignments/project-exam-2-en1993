@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { SECONDARY_API } from "../../constants/secondaryApi";
 import Heading from "../layout/Heading";
 import styles from "../home/Index.module.css";
+import { motion } from "framer-motion";
 
 export default function FeaturedPost() {
   const [posts, setPosts] = useState([]);
@@ -46,14 +47,17 @@ export default function FeaturedPost() {
         .map(function (post) {
           return (
             <div key={post.id}>
-              <div className={styles.featuredContent}>
+              <motion.div
+                whileHover={{ scale: 1 }}
+                className={styles.featuredContent}
+              >
                 <img
                   src={post.source_url}
                   alt={post.title.rendered}
                   className={styles.featuredPic}
                 />
                 <Heading content={post.title.rendered} size="3" />
-              </div>
+              </motion.div>
             </div>
           );
         })}
