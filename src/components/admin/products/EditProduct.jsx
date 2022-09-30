@@ -11,6 +11,9 @@ import DeleteProductButton from "./DeleteProductButton";
 
 const schema = yup.object().shape({
   title: yup.string().required("Title is required"),
+  price: yup.string().required("Price is required"),
+  image: yup.string().required("Image url is required"),
+  content: yup.string().required("Content is required"),
 });
 
 export default function EditProduct() {
@@ -96,19 +99,20 @@ export default function EditProduct() {
               <div>
                 <label>Price</label>
                 <input
-                  name="prices"
+                  name="price"
                   placeholder="price"
                   {...register("price")}
                 />
+                {errors.price && <FormError>{errors.price.message}</FormError>}
               </div>
               <div>
                 <label>Image</label>
                 <input
                   name="image"
-                  // defaultValue={product?.images[0]?.src}
                   placeholder="image"
                   {...register("image")}
                 />
+                {errors.image && <FormError>{errors.image.message}</FormError>}
               </div>
               <div>
                 <label>Content</label>
@@ -118,6 +122,9 @@ export default function EditProduct() {
                   placeholder="Content"
                   {...register("content")}
                 />
+                {errors.content && (
+                  <FormError>{errors.content.message}</FormError>
+                )}
               </div>
               <div className="editCtas">
                 <button className="updateCTA">Update</button>

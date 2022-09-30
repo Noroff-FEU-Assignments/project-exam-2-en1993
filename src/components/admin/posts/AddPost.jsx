@@ -10,6 +10,7 @@ import useAxios from "../../../hooks/useAxios";
 
 const schema = yup.object().shape({
   title: yup.string().required("Title is required"),
+  content: yup.string().required("Content is required"),
 });
 
 export default function AddPost() {
@@ -70,6 +71,9 @@ export default function AddPost() {
                 placeholder="Content"
                 {...register("content")}
               />
+              {errors.content && (
+                <FormError>{errors.content.message}</FormError>
+              )}
             </div>
 
             <button className="addCTA">

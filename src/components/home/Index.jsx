@@ -23,8 +23,8 @@ const HomePage = () => {
         </section>
         <section className="welcome-section">
           <div className="slider-wrapper">
-            <RiArrowLeftSLine className={styles.arrowIcons} />
-            <RiArrowRightSLine className={styles.arrowIcons} />
+            {/* <RiArrowLeftSLine className={styles.arrowIcons} />
+            <RiArrowRightSLine className={styles.arrowIcons} /> */}
             <HomePost />
           </div>
         </section>

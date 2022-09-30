@@ -36,24 +36,13 @@ export default function HomePost() {
     return <div>An error occured : {error} </div>;
   }
 
-  // for (let i = 0; i < posts.length; i++) {
-  //   if (i === 3) {
-  //     break;
-  //   }
-  // }
-
-  // for (let i = id  posts.id = id.0 && id.8 && id.9; i++) {
-  //   if(i === id){ break; }
-  // }
-
-
   function galleryShowing(galleryShow) {
     var shows = document.querySelectorAll(
       `#${galleryShow.id} [role="list"] .show`
-    ); // Get an array of slides
+    );
 
     var index = 0,
-      time = 100000000;
+      time = 5000;
     shows[index].classList.add("activate");
 
     setInterval(() => {
@@ -64,7 +53,7 @@ export default function HomePost() {
       shows[index].classList.add("activate");
     }, time);
   }
-  // console.log({ galleryShows });
+
   var galleryShows = document.querySelectorAll('[data-element="galleryShow"]');
   galleryShows.forEach(galleryShowing);
 
@@ -72,12 +61,12 @@ export default function HomePost() {
     <>
       {posts
         .filter(function (post) {
-          return post.id === 661 || post.id === 660 || post.id === 659;
+          return post.id === 661 || post.id === 660;
         })
         .map(function (post) {
           return (
             <div key={post.id}>
-              <div id="showGallery" data-element="galleryShow" >
+              <div id="showGallery" data-element="galleryShow">
                 <div role="list">
                   <div className="show">
                     <Heading content={post.title.rendered} size="3" />

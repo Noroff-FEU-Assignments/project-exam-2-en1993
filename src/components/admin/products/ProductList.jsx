@@ -39,13 +39,13 @@ export default function ProductList() {
       <div className="productListContent">
         <ul className="products">
           {products.map((media) => {
-            const image = media?._embedded?.['wp:featuredmedia'][0]?.source_url;
+            // const image = media?._embedded?.['wp:featuredmedia'][0]?.source_url;
             return (
               <li key={media.id}>
                 <Link to={`/admin/products/edit/${media.id}`}>
                   {media.title.rendered}
                 </Link>
-                <img src={image} alt="" />
+                {/* <img src={image} alt="" /> */}
               </li>
             );
           })}

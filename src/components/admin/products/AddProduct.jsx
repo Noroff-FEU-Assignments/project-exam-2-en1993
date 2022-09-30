@@ -1,18 +1,19 @@
-import Heading from '../../layout/Heading';
-import AdminPage from '../AdminPage';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import * as yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup';
-import FormError from '../../common/FormError';
-import useAxios from '../../../hooks/useAxios';
+import Heading from "../../layout/Heading";
+import AdminPage from "../AdminPage";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import FormError from "../../common/FormError";
+import useAxios from "../../../hooks/useAxios";
 
 // Schema must match the form data
 const schema = yup.object().shape({
-  title: yup.string().required('Title is required'),
-  price: yup.string().required('Price is required'),
-  image: yup.string().required('Image URL is required'),
+  title: yup.string().required("Title is required"),
+  price: yup.string().required("Price is required"),
+  image: yup.string().required("Image URL is required"),
+  content: yup.string().required("Content is required"),
 });
 
 export default function AddProduct() {
@@ -34,9 +35,9 @@ export default function AddProduct() {
     setServerError(true);
     setServerError(null);
 
-    data.status = 'publish';
+    data.status = "publish";
 
-    if (data.featured_media === '') {
+    if (data.featured_media === "") {
       data.featured_media = null;
     }
 
@@ -45,11 +46,11 @@ export default function AddProduct() {
     try {
       // const response = await http.post("/wp/v2/posts", data);
       console.log(data);
-      const response = await http.post('/wp/v2/product', data);
-      console.log('PRODUCTS-DATA:', response.data);
+      const response = await http.post("/wp/v2/product", data);
+      console.log("PRODUCTS-DATA:", response.data);
       // navigate.push("/admin/products");
     } catch (error) {
-      console.log('error', error);
+      console.log("error", error);
       setServerError(error.tostring());
     } finally {
       setSubmitting(false);
@@ -65,12 +66,12 @@ export default function AddProduct() {
           <div className="addContent" disabled={submitting}>
             <div>
               <label>Name</label>
-              <input name="title" placeholder="title" {...register('title')} />
+              <input name="title" placeholder="title" {...register("title")} />
               {errors.title && <FormError>{errors.title.message}</FormError>}
             </div>
             <div>
               <label>Price</label>
-              <input name="price" placeholder="price" {...register('price')} />
+              <input name="price" placeholder="price" {...register("price")} />
               {errors.price && <FormError>{errors.price.message}</FormError>}
             </div>
             <div>
@@ -78,7 +79,7 @@ export default function AddProduct() {
               <input
                 name="image"
                 placeholder="image url"
-                {...register('image')}
+                {...register("image")}
               />
               {errors.image && <FormError>{errors.image.message}</FormError>}
             </div>
@@ -87,12 +88,15 @@ export default function AddProduct() {
               <textarea
                 name="content"
                 placeholder="Content"
-                {...register('content')}
+                {...register("content")}
               />
+              {errors.content && (
+                <FormError>{errors.content.message}</FormError>
+              )}
             </div>
 
             <button className="addCTA">
-              {submitting ? 'Submitting...' : 'Submit'}
+              {submitting ? "Submitting..." : "Submit"}
             </button>
           </div>
         </form>

@@ -11,6 +11,7 @@ import DeletePostButton from "./DeletePostButton";
 
 const schema = yup.object().shape({
   title: yup.string().required("Title is required"),
+  content: yup.string().required("Content is required"),
 });
 
 export default function EditPost() {
@@ -98,6 +99,9 @@ export default function EditPost() {
                   placeholder="Content"
                   {...register("content")}
                 />
+                {errors.content && (
+                  <FormError>{errors.content.message}</FormError>
+                )}
               </div>
               <div className="editCtas">
                 <button className="updateCTA">Update</button>

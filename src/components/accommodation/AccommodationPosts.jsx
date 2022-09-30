@@ -36,15 +36,13 @@ export default function AccommodationPost() {
     return <div>An error occured : {error} </div>;
   }
 
- 
-
   function galleryShowing(galleryShow) {
     var shows = document.querySelectorAll(
       `#${galleryShow.id} [role="list"] .show`
-    ); // Get an array of slides
+    );
 
     var index = 0,
-      time = 1000000;
+      time = 7000;
     shows[index].classList.add("activate");
 
     setInterval(() => {
@@ -55,7 +53,7 @@ export default function AccommodationPost() {
       shows[index].classList.add("activate");
     }, time);
   }
-  // console.log({ galleryShows });
+
   var galleryShows = document.querySelectorAll('[data-element="galleryShow"]');
   galleryShows.forEach(galleryShowing);
 
