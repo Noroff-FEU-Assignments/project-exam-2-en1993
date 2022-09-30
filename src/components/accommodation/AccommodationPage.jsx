@@ -1,8 +1,9 @@
-import Footer from "../layout/footer/Footer";
-import Heading from "../layout/Heading";
-import AccommodationPost from "./AccommodationPosts";
-import styles from "../accommodation/AccommodationPage.module.css";
-import AccommodationList from "./AccommodationList";
+import Footer from '../layout/footer/Footer';
+import Heading from '../layout/Heading';
+import AccommodationPost from './AccommodationPosts';
+import styles from '../accommodation/AccommodationPage.module.css';
+import AccommodationList from './AccommodationList';
+import AccommodationWithSearch from './AccommodationWithSearch';
 // import SearchBar from "./SearchBar";
 
 const AccommodationPage = () => {
@@ -17,12 +18,8 @@ const AccommodationPage = () => {
         </section>
         <section>
           <Heading content="Our Accommodation" size="2" />
-          <div className={styles.search}>
-            <input type="text" placeholder=" Search Product.." />
-            {/* <SearchBar /> */}
-          </div>
           <div className={styles.productsWrapper}>
-            <AccommodationList />
+            <AccommodationWithSearch />
           </div>
         </section>
       </main>
