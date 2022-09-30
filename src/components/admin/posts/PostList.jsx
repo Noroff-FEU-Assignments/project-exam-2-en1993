@@ -33,19 +33,21 @@ export default function PostList() {
 
   return (
     <>
-      <Heading content="  PostList Page" size="3" />
+      <div>
+        <Heading content="  PostList Page" size="3" />
 
-      <ul className="posts">
-        {posts.map((media) => {
-          return (
-            <li key={media.id}>
-              <Link to={`/admin/posts/edit/${media.id}`}>
-                {media.title.rendered}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+        <ul className="posts">
+          {posts.map((media) => {
+            return (
+              <li key={media.id}>
+                <Link to={`/admin/posts/edit/${media.id}`}>
+                  {media.title.rendered}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 }

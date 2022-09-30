@@ -43,18 +43,18 @@ body {
   --third-color: white;
   --links-color: blue;
 } */
-/* :root {
+:root {
   --primary-color: #96fce5;
   --secondary-color: #00574d;
   --third-color: white;
   --links-color: blue;
-} */
-:root {
+}
+/* :root {
   --primary-color: #a0e087;
   --secondary-color: #0e3303;
   --third-color: white;
   --links-color: blue;
-}
+} */
 /* :root {
   --primary-color: #ffab24;
   --secondary-color: #023901;
