@@ -37,18 +37,18 @@ body {
   margin: 15px auto;
 }
 
-/* :root {
+:root {
   --primary-color: #fff091;
   --secondary-color: #000000;
   --third-color: white;
   --links-color: blue;
-} */
-:root {
+}
+/* :root {
   --primary-color: #96fce5;
   --secondary-color: #00574d;
   --third-color: white;
   --links-color: blue;
-}
+} */
 /* :root {
   --primary-color: #a0e087;
   --secondary-color: #0e3303;
@@ -157,51 +157,6 @@ li a:hover {
 
 .desktopNav {
   display: none;
-}
-
-@media only screen and (min-width: 1024px) {
-  main {
-    margin-top: 0em;
-  }
-  h1 {
-    margin-top: 7em;
-  }
-
-  /* Header Section */
-
-  .responsiveNav {
-    display: none;
-  }
-
-  .desktopNav {
-    display: flex;
-  }
-
-  .DesktopNavLinks {
-    position: relative;
-  }
-
-  ul li {
-    display: inline-flex;
-    margin: 0 15px;
-    padding: 0px;
-  }
-
-  header {
-    position: fixed;
-    background-color: var(--secondary-color);
-    height: 150px;
-    align-items: center;
-  }
-
-  .adminSection {
-    left: 8%;
-    margin: 0px 15px;
-  }
-
-  ul {
-    position: unset;
-  }
 }
 
 ul.posts a,
@@ -338,7 +293,9 @@ ul.products {
 .addProductForm,
 .editProductForm,
 .addPostForm,
-.editPostForm {
+.editPostForm,
+.postListContent,
+.productListContent {
   display: flex;
 }
 
@@ -365,4 +322,49 @@ ul.products {
   font-weight: bold;
   font-family: "Spline Sans Mono";
   border: 2px solid var(--secondary-color);
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    margin-top: 0em;
+  }
+  h1 {
+    margin-top: 7em;
+  }
+
+  /* Header Section */
+
+  .responsiveNav {
+    display: none;
+  }
+
+  .desktopNav {
+    display: flex;
+  }
+
+  .DesktopNavLinks {
+    position: relative;
+  }
+
+  ul li {
+    display: inline-flex;
+    margin: 0 15px;
+    padding: 0px;
+  }
+
+  header {
+    position: fixed;
+    background-color: var(--secondary-color);
+    height: 150px;
+    align-items: center;
+  }
+
+  .adminSection {
+    left: 8%;
+    margin: 0px 15px;
+  }
+
+  ul {
+    position: unset;
+  }
 }

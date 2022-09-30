@@ -35,13 +35,12 @@ export default function ProductList() {
   return (
     <>
       <Heading content="  ProductList Page" size="3" />
-      <div>
+      <div className="productListContent">
         <ul className="products">
           {products.map((media) => {
             return (
               <li key={media.id}>
                 <Link to={`/admin/products/edit/${media.id}`}>
-                  {/* {media.title.rendered} */}
                   {media.title.rendered}
                 </Link>
               </li>

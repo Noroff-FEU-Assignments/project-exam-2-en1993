@@ -59,7 +59,9 @@ function AccommodationDetail() {
 
   return (
     <>
-      <Heading content="Accommodation Specifics " size="1" />
+      <div className={styles.accDetailH1}>
+        <Heading content="Accommodation Specifics " size="1" />
+      </div>
       <main className={styles.productDetail}>
         <section>
           <div

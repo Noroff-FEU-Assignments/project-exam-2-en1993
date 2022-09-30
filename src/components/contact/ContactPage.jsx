@@ -7,7 +7,9 @@ import { ContactForm } from "./ContactForm";
 const ContactPage = () => {
   return (
     <>
-      <Heading content="Contact " size="1" />
+      <div className={styles.contactH1}>
+        <Heading content="Contact " size="1" />
+      </div>
       <main>
         <section>
           <Heading content="Contact Us" size="2" />

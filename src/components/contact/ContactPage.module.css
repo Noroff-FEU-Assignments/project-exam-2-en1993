@@ -1,3 +1,6 @@
+.contactH1 {
+  margin: 19em 0em -27em;
+}
 .welcomeContactPicture {
   background-image: url(../images/pexels-thanhhoa-tran-1488327.jpg);
   width: 80%;
@@ -30,6 +33,10 @@ iframe {
   height: 300px;
 }
 @media only screen and (min-width: 1024px) {
+  .contactH1 {
+    margin: 0em 0em 0em;
+  }
+
   iframe {
     width: 450px;
     height: 350px;

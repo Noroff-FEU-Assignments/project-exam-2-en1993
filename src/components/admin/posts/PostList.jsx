@@ -33,9 +33,8 @@ export default function PostList() {
 
   return (
     <>
-      <div>
-        <Heading content="  PostList Page" size="3" />
-
+      <Heading content="  PostList Page" size="3" />
+      <div className="postListContent">
         <ul className="posts">
           {posts.map((media) => {
             return (
