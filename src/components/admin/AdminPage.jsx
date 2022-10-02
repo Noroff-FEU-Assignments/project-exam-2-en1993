@@ -7,7 +7,7 @@ export default function AdminPage({ children }) {
   return (
     <>
       <main>
-        <Heading content=" Admin Page" />
+        <Heading content=" Admin Page" size="1" />
         <AdminMenu />
         {children ? children : <p>Select a section</p>}
       </main>
