@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Login site
+
+### Log in information
+
+Login Username and password have been added to the report in the section 5. Appendices
+
 ## Available Scripts
 
 In the project directory, you can run:
